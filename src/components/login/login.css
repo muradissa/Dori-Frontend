@@ -1,0 +1,54 @@
+.login-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    border-radius: 1rem;
+    margin-top: 10rem;
+    /* animation: infinite-animation 5s infinite; */
+  }
+  
+  .login-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .login-container  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-container .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .login-container  label {
+    color: white;
+    display: flex;
+  }
+  
+  .login-container .forgot-password {
+    color: white;
+    text-decoration: none;
+  }
+  .login-container  .login-options {
+    margin-top: 20px;
+  }
+  
+  .login-container .login-options p {
+    margin-bottom: 10px;
+  }
+  
+  .login-container .login-options button {
+    margin-right: 10px;
+  }
+  @keyframes infinite-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

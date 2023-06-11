@@ -1,0 +1,178 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 50px; */
+    /* background-color: #6936F5; */
+    color: white;
+    /* color: white; */
+    height: 90vh;
+    width: 100%;
+  }
+  
+  .welcome {
+    flex: 1;
+    background-color: #6936F5;
+    height: 100%;
+    align-items: center;
+
+  }
+  .wlecome-text{
+    /* height: ; */
+    margin: auto auto;
+    margin-top: 200px;
+    align-items: center;
+    gap: 2rem;
+
+  }
+  .welcome h1 {
+    font-size: 36px;
+    
+    margin-bottom: 20px;
+    
+  }
+  
+  .welcome p {
+    margin-top: 6rem;
+
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .content {
+    /* background-color: antiquewhite; */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image {
+    /* width: 300px;
+    height: 300px; */
+    border-radius: 10%;
+    margin-bottom: 20px;
+  }
+  
+  .login-button {
+    background-color: #6936F5;
+
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition:  0.4s ease;
+  }
+  
+  .login-button:hover {
+    scale: 1.05;
+    background-color: #A6ACEC;
+    box-shadow: 5px 5px 5px #6936F5;
+    
+
+  }
+  
+  /****************** Waves ***************/
+   .waves{
+    position: relative;
+    
+    /* width: 100%; */
+    width: 100px;
+    height: 100%;
+    background: #6936F5;;
+    overflow: hidden;
+    /* z-index: 11; */
+  }
+   .waves .air{
+    position: absolute;
+    /* background: #36f595;; */
+    right: 0;
+    
+    /* height: 100%;    
+    width:100%; */
+    width: 2000px;
+    height: 2000px;
+
+    background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png)  ;
+    transform: rotate(-90deg);
+   
+    background-size: 600px 100px;
+    
+    /* z-index: -3; */ 
+
+  }
+  /* .waver{
+    background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png)  ;
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+    transform: rotate(90deg);
+
+  } */
+  .waves .air.air1{
+    
+    animation: wave 30s linear infinite;
+    z-index: 10;
+    opacity: 1;
+    animation-delay: 0s;
+    
+    /* bottom: 0; */
+    left: 0;
+  }
+   .waves .air.air2{
+    animation: wave2 10s linear infinite;
+    z-index: 9;
+    opacity: 0.5;
+    animation-delay: -1s;
+    /* bottom: 10px; */
+    left: 10px; 
+    /* right: 0; */
+
+  }
+   .waves .air.air3{
+    animation: wave 15s linear infinite;
+    z-index: 8;
+    opacity: 0.2;
+    animation-delay: -3s;
+    /* bottom: 15px; */
+    left: 15px;
+  }
+   .waves .air.air4{
+    animation: wave2 30s linear infinite;
+    z-index: 7;
+    opacity: 0.7;
+    animation-delay: -2s;
+    /* bottom: 20px; */
+    left: 20px;
+
+  }
+  @keyframes wave{
+    0%{
+      background-position-x: 0vh; 
+    }
+    50%{
+        background-position-x: 90vh; 
+
+    }
+    100%{
+      background-position-x: 0vh; 
+    }
+   
+    
+  }
+  @keyframes wave2{
+    0%{
+      background-position-x: 0px; 
+
+    }
+    50%{
+        background-position-x: -90vh; 
+
+    }
+    100%{
+      background-position-x: 0vh; 
+
+    }
+  }
