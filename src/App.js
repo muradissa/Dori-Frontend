@@ -36,7 +36,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes >
-            <Route element={<LayoutHome />} style={{ minHeight: "100vh" }}>
+            <Route element={<LayoutHome />} >
             <Route exact path='/' element={<Home/>}/>
               <Route exact path='/login' element={<Login/>}/>
               {/* <Route exact path='/signup' element={<Signup2/>}/> */}
@@ -45,15 +45,13 @@ function App() {
        
         <Routes >
           {/* <Route element={<PrivateRoute/>}> */}
-            <Route element={<Layout />} style={{ minHeight: "100vh" }}>
+            <Route element={<Layout />} >
               <Route exact path='/personal-account' element={<Personal/>}/>
 
             </Route>
           {/* </Route>                */}
         </Routes>  
-        {/* <Navbar></Navbar>
-        <Home></Home> */}
-        {/* <ChangeAccounts/> */}
+        
       </div>
     </BrowserRouter>
   );

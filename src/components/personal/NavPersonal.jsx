@@ -1,43 +1,25 @@
 import React ,{useState} from 'react'
 import Form from 'react-bootstrap/Form';
 import './personal.css'
-function NavPersonal() {
+function NavPersonal({changeComponent}) {
 
     const [personalSection, setPersonalSection] = useState(1);
     const type= "radio";
+    const eventHandlerBtns =(selected) =>{
+      if(selected ===1){
+        setPersonalSection(1)
+        changeComponent("newBooking")
+      }
+      if(selected ===2){
+        setPersonalSection(2)
+        changeComponent("myBookings")
+      }
+      
+    }
   return (
-    <div className='navPersonal'>
-        {/* <Form>   
-        <div key={`reverse-${type}`} className="mb-3">
-          <Form.Check
-            reverse
-            label="1"
-            name="group1"
-            type="radio"
-            id={`reverse-${type}-1`}
-            default
-          />
-          <Form.Check
-            reverse
-            label="2"
-            name="group1"
-            type="radio"
-            id={`reverse-${type}-2`}
-          />
-          <Form.Check
-            reverse
-            disabled
-            label="3 (disabled)"
-            type="radio"
-            id={`reverse-${type}-3`}
-          />
-        </div>
-        </Form> */}
-
-        <button className={"btn-radio "+ `${personalSection==1 ? "btn-radio-selected":""}` } onClick={()=> setPersonalSection(1)}>New Reservation</button>
-        <button className={"btn-radio "+ `${personalSection==2 ? "btn-radio-selected":""}` } onClick={()=> setPersonalSection(2)}>My Reservation</button>
-
-
+    <div className='navPersonal'>     
+        <button className={"btn-radio "+ `${personalSection==1 ? "btn-radio-selected":""}` } onClick={()=> eventHandlerBtns(1)}>New Reservation</button>
+        <button className={"btn-radio "+ `${personalSection==2 ? "btn-radio-selected":""}` } onClick={()=> eventHandlerBtns(2)}>My Reservation</button>
     </div>
   )
 }
