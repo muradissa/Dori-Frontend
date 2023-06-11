@@ -1,8 +1,15 @@
 import React from 'react';
+import { useNavigate  } from "react-router-dom";
+
 import './home.css';
 import HomeImg from '../../assets/home-img.jpg';
 
 const Home = () => {
+  const navigate = useNavigate ();
+
+  const openLoginPage = () =>{
+    navigate("/login")  
+  }
   return (
     <div className="home">
       <div className="welcome">
@@ -22,9 +29,9 @@ const Home = () => {
         <div class='air air4'></div>
       </div>
       <div className="content">
-        <div className='waver'></div>
+        {/* <div className='waver'></div> */}
         <img src={HomeImg} alt="Image" className="image" />
-        <button className="login-button">Login</button>
+        <button className="login-button" onClick={()=>openLoginPage()}>Login</button>
       </div>
     </div>
   );

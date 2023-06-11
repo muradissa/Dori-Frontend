@@ -15,7 +15,7 @@
     margin-bottom: 20px;
   }
   
-  .login-container  form {
+  .login-container form {
     display: flex;
     flex-direction: column;
   }
@@ -24,7 +24,7 @@
     margin-bottom: 15px;
   }
   
-  .login-container  label {
+  .login-container label {
     color: white;
     display: flex;
   }
@@ -33,7 +33,7 @@
     color: white;
     text-decoration: none;
   }
-  .login-container  .login-options {
+  .login-container .login-options {
     margin-top: 20px;
   }
   

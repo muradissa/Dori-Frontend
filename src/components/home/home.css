@@ -10,14 +10,14 @@
     width: 100%;
   }
   
-  .welcome {
+  .home  .welcome {
     flex: 1;
     background-color: #6936F5;
     height: 100%;
     align-items: center;
 
   }
-  .wlecome-text{
+  .home  .wlecome-text{
     /* height: ; */
     margin: auto auto;
     margin-top: 200px;
@@ -25,21 +25,21 @@
     gap: 2rem;
 
   }
-  .welcome h1 {
+  .home .welcome h1 {
     font-size: 36px;
     
     margin-bottom: 20px;
     
   }
   
-  .welcome p {
+  .home .welcome p {
     margin-top: 6rem;
 
     font-size: 24px;
     font-weight: bold;
   }
   
-  .content {
+  .home .content {
     /* background-color: antiquewhite; */
     flex: 1;
     display: flex;
@@ -47,14 +47,14 @@
     align-items: center;
   }
   
-  .image {
+  .home .image {
     /* width: 300px;
     height: 300px; */
     border-radius: 10%;
     margin-bottom: 20px;
   }
   
-  .login-button {
+  .home .login-button {
     background-color: #6936F5;
 
     color: white;
@@ -66,7 +66,7 @@
     transition:  0.4s ease;
   }
   
-  .login-button:hover {
+  .home .login-button:hover {
     scale: 1.05;
     background-color: #A6ACEC;
     box-shadow: 5px 5px 5px #6936F5;
