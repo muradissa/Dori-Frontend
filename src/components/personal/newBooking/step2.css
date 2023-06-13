@@ -44,16 +44,16 @@
     font-size: 14px;
   }
   
-  thead{
+  .datepicker-container thead{
     border: 3px solid #fff;
   }
-  th, td {
+  .datepicker-container th, .datepicker-container td {
     padding: 10px;
     text-align: center;
     border: 1px solid #ccc;
   }
   
-  th {
+  .datepicker-container th {
     background-color: #6936F5;
     color: white;
   }

@@ -1,0 +1,90 @@
+.bookings-container {
+    /* max-width: 800px; */
+    max-width: 90%;
+
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .bookings-container  h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .bookings-container .tables-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .bookings-container .table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+  }
+  /* .table-type-1{
+    max-width: 30vh;
+  } */
+  .tbody-today-tomorrow{
+    max-height: 30px;
+    background-color: #6936F5;
+    overflow-y: hidden;
+  }
+  
+  .bookings-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .bookings-container table {
+    width: 100%;
+    border-collapse: collapse;
+    /* max-height: 40vh; */
+  }
+  
+  .bookings-container th,
+  .bookings-container td {
+    padding: 10px;
+    text-align: center;
+    /* border-bottom: 1px solid #dddddd; */
+    border: 1px solid #ccc;
+
+  }
+  
+  .bookings-container th {
+    /* background-color: #f5f5f5;
+    color: #333333; */
+    background-color: #6936F5;
+    color: white;
+    
+    font-weight: bold;
+  }
+  
+  .bookings-container tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  .bookings-container button {
+    background-color: #6936F5;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bookings-container button:hover {
+    background-color: #A6ACEC;
+    /* opacity: 0.6; */
+  }
+
+  
+  @media (max-width: 768px) {
+    .tables-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
