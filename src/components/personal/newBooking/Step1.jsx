@@ -2,7 +2,9 @@ import React ,{useState} from 'react'
 
 function Step1() {
     
-    const [chooseService,setChosenService] = useState(0)
+    const [chooseService,setChosenService] = useState(0);
+    const [chooseEmployer,setChosenEmployer] = useState(0)
+
 
     const listOfServices = [
         {
@@ -42,6 +44,14 @@ function Step1() {
             name:"Math Homework"
         }, 
     ]
+
+    const listOfEmployers = [
+        {
+            id:0,
+            name:"John Avhent",
+            image:"avatar10.png",
+        },
+    ]
   return (
     
     <div className='step1'>
@@ -58,7 +68,17 @@ function Step1() {
             </div>
         </div>
         <div className='step1-right'>
-
+            <div className="list-of-employers">
+                {listOfEmployers.map(employer => 
+                    <div key={employer.id}
+                        className={"item-employer "+ `${employer.id === chooseEmployer ? " selected-employer":""}` }
+                        onClick={()=> setChosenEmployer(employer.id)}
+                    >
+                        <img className="item-employer-img" src={`./assets/${employer.image}`} alt=""></img>
+                        <span >{employer.name}</span>
+                    </div>
+                )}
+            </div>
         </div>
 
     </div>

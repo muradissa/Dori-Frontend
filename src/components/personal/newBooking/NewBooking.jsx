@@ -2,9 +2,10 @@ import React,{useState,useEffect} from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
-import {AiOutlineSearch,AiFillStar} from 'react-icons/ai';
+import {AiOutlineSearch,AiFillStar,AiOutlinePlus} from 'react-icons/ai';
 import {BsFillTelephoneForwardFill} from 'react-icons/bs';
 import {GrLocation} from 'react-icons/gr';
+// import {FaHeartCirclePlus} from 'react-icons/fa-heart';
 import BookingStepper from './BookingStepper';
 
 
@@ -53,7 +54,8 @@ function NewBooking() {
             <br/>
             <GrLocation/> Tel aviv asfasfa 3 sadfd</h5>
           <br/>
-          <button className='add-to-favorite'>Add to Favorite +</button>
+          <button className='add-to-favorite'>Add to Favorite <AiOutlinePlus/></button>
+          {/* <button className='add-to-favorite'>Add to Favorite +</button> */}
           {/* <button className='remove-from-favorite'>Remove from Favorite +</button> */}
 
         </div>

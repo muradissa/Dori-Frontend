@@ -82,6 +82,16 @@
 
 
 /******* Step1 *******/
+.step1{
+    display: flex;
+}
+/******* left *******/
+.step1-left{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+
+}
 .list-of-services{
     max-height: 40vh;
     overflow-y: auto;
@@ -103,6 +113,41 @@
 }
 .item-service span{
     font-size: 18px;
+}
+/******* right *******/
+.step1-right{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+.list-of-employers{
+    max-height: 40vh;
+    overflow-y: auto;
+    width: 300px;
+    
+}
+.item-employer{
+    display: flex;
+    margin: 5px 5px;
+    margin-right: 0px;
+    padding: 5px 5px;
+    width: 250px;
+    background-color: #e0e0e0;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 20px;
+    gap: 1rem;
+}
+.selected-employer{
+    background-color: var(--secondory);
+}
+.item-employer-img{
+    max-width: 40px;
 }
 /********************/
 

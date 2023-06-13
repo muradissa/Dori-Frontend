@@ -1,0 +1,130 @@
+
+
+   .datepicker-container {
+    /* max-width: 500px; */
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    justify-content: center;
+    gap: 2rem;
+  }
+  /** strp2 left **/
+  .step2-left{
+    max-width: 67%;
+  }
+  .controls {
+    margin-bottom: 20px;
+    display: flex;
+    margin: auto auto;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  #dropdown-basic-button2{
+    width: 100px;
+    text-align: end;
+    opacity: 0.85;
+    background-color: #6936F5;
+  }
+  #dropdown-basic-button3{
+    width: 100px;
+    text-align: end;
+    opacity: 0.85;
+    background-color: #6936F5;
+
+  }
+  .datepicker-table {
+    /* width: 100%; */
+    max-width: 600px;
+    padding: 1rem;
+    margin: 1rem 1rem;;
+
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  
+  thead{
+    border: 3px solid #fff;
+  }
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #6936F5;
+    color: white;
+  }
+  
+  .empty-cell {
+    /* background-color: #f5f5f5; */
+    background-color: #dddddd;
+
+  }
+  
+  .date-cell {
+    cursor: pointer;
+    /* background-color: #6936F5; */
+    /* background-color: #626fff; */
+    opacity: 0.85;
+    background-color: #6936F5;
+
+    /* background-color: #626fff; */
+
+
+    color: white;
+    font-size: medium;
+    transition: 0.3s;
+  }
+  
+  /* .date-cell.selected {
+    background-color: #A6ACEC;
+  } */
+  .date-cell-selected {
+    /* background-color: #626fff; */
+    background-color: #3e4488;
+
+  }
+ 
+  .date-cell:hover {
+    background-color: #A6ACEC;
+    
+  } 
+  .date-cell-selected:hover {
+    background-color: #3e4488;
+  }
+  
+
+  /** step2 right **/
+  .step2-right{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 200px;
+    height: 100%;
+    /* background-color: yellow; */
+
+  }
+  .list-of-hours{
+    max-height: 40vh;
+    overflow-y: auto;
+    width: 150px;
+ 
+  }
+  .item-hour{
+    /* width: 350px; */
+    margin:5px 5px;
+    padding: 5px 5px;
+    background-color: #e0e0e0;
+    justify-content: center;
+    align-items: center;
+    border-radius:0.5rem ;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .selected-hour{
+    background-color: var(--secondory);
+
+  }

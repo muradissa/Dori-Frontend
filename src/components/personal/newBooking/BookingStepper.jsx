@@ -6,6 +6,7 @@ import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Step1 from './Step1';
+import Step2 from './Step2';
 
 // const steps = ['Select campaign settings', 'Create an ad group', 'Create an ad'];
 const steps = ['Select campaign settings', 'Create an ad group'];
@@ -94,7 +95,10 @@ export default function BookingStepper() {
             {
               activeStep===0 && <Step1></Step1>
             }
-            Step {activeStep + 1} +55
+            {
+              activeStep===1 && <Step2></Step2>
+            }
+            {/* Step {activeStep + 1} +55 */}
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button
