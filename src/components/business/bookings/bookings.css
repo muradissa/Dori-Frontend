@@ -1,0 +1,34 @@
+
+.bookings-choosing-date{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: end;
+    margin-bottom: 40px;
+}
+  .datepicker-choosing-date {
+    display: inline-block;
+    /* justify-items: start; */
+    position: relative;
+    text-align: start;
+    /* align-items: center; */
+    margin-left: 40px;
+  } 
+  
+ .datepicker-input {
+    width: 240px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+    text-align: center;
+  }
+  
+  .datepicker-input:focus {
+    outline: none;
+    border: 2px solid ;
+    border-color: var(--primary)
+  }
+  

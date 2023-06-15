@@ -4,8 +4,10 @@ import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
 import Login from "./components/login/Login";
 import Personal from "./components/personal/Personal";
+import Business from "./components/business/Business";
+import Shop from "./components/shop/Shop";
 
-import ChangeAccounts from './components/changeaccounts/ChangeAccounts';
+//import ChangeAccounts from './components/changeaccounts/ChangeAccounts';
 
 
 function App() {
@@ -47,6 +49,10 @@ function App() {
           {/* <Route element={<PrivateRoute/>}> */}
             <Route element={<Layout />} >
               <Route exact path='/personal-account' element={<Personal/>}/>
+              <Route exact path='/business-account' element={<Business/>}/>
+              <Route exact path='/shop-account' element={<Shop/>}/> 
+
+
 
             </Route>
           {/* </Route>                */}
