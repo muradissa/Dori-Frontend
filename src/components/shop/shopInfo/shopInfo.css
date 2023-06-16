@@ -1,0 +1,21 @@
+.shop-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.shop-info img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    
+}
+.shop-info-column{
+    width: 30%;
+    justify-content: space-around;
+    margin: auto auto;
+}
+.shop-info h5{
+    /* width: fit-content; */
+    margin: 15px auto;  
+}

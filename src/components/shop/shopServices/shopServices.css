@@ -1,0 +1,28 @@
+.shop-services{
+    /* gap:20px; */
+
+    /* height: 40vh; */
+    margin: 20px 0px;
+    width: 100%;
+}
+.shop-services-item{
+    min-width: 250px;
+    /* max-width: 400px; */
+    width: 20%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 3px solid var(--primary);
+    border-radius: 0.7rem;
+    padding:10px 20px;
+    margin: 0.5rem 1rem;
+    gap: 20px;
+    align-items: center;
+    /* background-color: whitesmoke; */
+    
+}
+.shop-services-item h6{
+    margin: 0 0 0 0;
+    align-items: center;
+    text-align: start;
+}

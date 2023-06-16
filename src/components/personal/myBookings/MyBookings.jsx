@@ -29,7 +29,7 @@ const MyBookings = () => {
   // const todayYear = new Date().toDateString();
 
   return (
-    <div className="bookings-container">
+    <div className="table-container">
       <h1>My Bookings</h1>
       <div className="tables-container">
         <div className="table table-type-1">

@@ -40,7 +40,7 @@ function Bookings() {
     setSelectedDate(date);
   };
   return (
-    <div className='bookings-container'>
+    <div className='table-container'>
 
       <div className='bookings-choosing-date'>
         <DropdownButton id="dropdown-basic-button" title={selectedDropDownDate}>
