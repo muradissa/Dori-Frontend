@@ -66,8 +66,8 @@
   background-color: var(--primary);
   color: white;
   border: none;
-  padding: 1rem;
-  margin: 0rem 2rem 2rem;
+  padding: 0.6rem 2rem 0.5rem 2rem;
+  margin: 0rem 0.5rem 5rem;
   border-radius: 0 0 1rem 1rem;
   font-size: 18px;
   cursor: pointer;

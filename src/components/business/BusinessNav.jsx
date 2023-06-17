@@ -18,6 +18,8 @@ function BusinessNav({changeComponent}) {
     //     setPersonalSection(3)
     //     changeComponent("StoreSettings")
     //   }
+
+    
       
     }
   return (
