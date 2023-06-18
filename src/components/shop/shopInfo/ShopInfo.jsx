@@ -1,16 +1,21 @@
 import React ,{useState} from 'react'
 import ShopInfoModal from './ShopInfoModal';
-import {BsFillTelephoneForwardFill,BsTelephonePlusFill} from 'react-icons/bs';
+import {BsFillTelephoneForwardFill,BsTelephonePlusFill,BsDownload} from 'react-icons/bs';
 import {GrLocation} from 'react-icons/gr';
 import './shopInfo.css'
 function ShopInfo() {
 
     const [modalShow, setModalShow] = React.useState(false);
 
-
+ 
   return (
-    <div>
-        <div className='shop-info'>
+    <div className="shop-info">
+        <div className='shop-info-code-poster'>
+            <h3 >Code : c3g5h1</h3>
+            <button>Download Poster <BsDownload style={{scale:1.1}}/></button>
+        </div>
+        
+        <div className='shop-info-row'>
             <div className='shop-info-column'>
                 <img src="./assets/barbershop.png" alt=""></img>
             </div>

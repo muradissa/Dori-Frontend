@@ -1,9 +1,28 @@
+
+.shop-services-container{
+    background-color: whitesmoke;
+    padding-top:3rem;
+    padding-bottom:3rem;
+    border-radius:1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    margin: auto auto;
+}
 .shop-services{
     /* gap:20px; */
 
     /* height: 40vh; */
     margin: 20px 0px;
     width: 100%;
+    /* background-color: whitesmoke;
+    padding-top:3rem;
+    padding-bottom:3rem;
+    border-radius:1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    margin: auto auto; */
+    
+    
 }
 .shop-services-item{
     min-width: 250px;
@@ -18,11 +37,40 @@
     margin: 0.5rem 1rem;
     gap: 20px;
     align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
     /* background-color: whitesmoke; */
+    background-color: white;
+
     
+}
+
+.shop-services-item:hover{
+
+    scale: 1.03;
 }
 .shop-services-item h6{
     margin: 0 0 0 0;
     align-items: center;
     text-align: start;
+}
+
+.service-modal-body{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    gap: 2rem;
+}
+
+
+.form-floating>.form-control:focus ,.form-floating>.form-select:focus{
+    box-shadow: 0px 1px 10px var(--primary);
+}
+.modal-header{
+    background-color: var(--primary);
+    color: white;
+}
+.modal-body>h6{
+    text-align: center;
+
 }

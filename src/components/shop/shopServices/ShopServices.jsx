@@ -1,8 +1,13 @@
-import React from 'react'
-import './shopServices.css'
-function ShopServices() {
-    const [modalShow, setModalShow] = React.useState(false);
+import React ,{useState}from 'react';
+import {LuEdit} from 'react-icons/lu';
 
+import './shopServices.css'
+import EditServices from './EditServices';
+import AddService from './AddService';
+function ShopServices() {
+    const [modalShowNewService, setModalShowNewService] = React.useState(false);
+    const [modalShowEditService, setModalShowEditervice] = React.useState(false);
+    const [itemServiceEdit, setItemServiceEdit] = useState(null);
     const services = [
         { id: 1, name: 'Massage', time: '30min' },
         { id: 2, name: 'Haircut', time: '45min' },
@@ -26,25 +31,30 @@ function ShopServices() {
         { id: 20, name: 'Facial Waxing', time: '15min' },
       ];
 
+    const EditServiceFunction = (item) =>{
+        setItemServiceEdit(item);
+        setModalShowEditervice(true);
+    }
 
     return (
         <div className='shop-services-container'> 
             <div className='shop-services'>
                 {services.map(item => 
-                <div className='shop-services-item'>
+                <div className='shop-services-item' onClick={() => EditServiceFunction(item)}>
                     <h6>{item.name} </h6>
-                    <h6>{item.time} </h6>
+                    <h6>{item.time} <LuEdit style={{color:"green",scale:"1.1"}}/></h6>
                 </div>
                     
                 )}
             </div>
-            <button className="btn-save">
+            <button className="btn-save" onClick={() => setModalShowNewService(true)} >
                 New Service
             </button>
-            <button className="btn-edit" onClick={() => setModalShow(true)}>
-                Edit
-            </button>
-            {/* <ShopInfoModal show={modalShow} onHide={() => setModalShow(false)}/> */}
+
+            { modalShowEditService &&
+                <EditServices show={modalShowEditService} onHide={() => setModalShowEditervice(false)} serviceItem={itemServiceEdit}/>
+            }
+            <AddService show={modalShowNewService} onHide={() => setModalShowNewService(false)}/>
         </div>
     )
 }

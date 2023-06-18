@@ -1,10 +1,45 @@
+.shop-info-code-poster{
+    /* background:var(--secondory); */
+    display:flex;
+    gap: 3rem;
+    width:fit-content;
+    margin:auto auto ;
+    margin-bottom:2rem;
+    padding:5px;
+    /* color:white; */
+    /* border-radius:5px; */
+    border-bottom:2px solid var(--primary);
+    align-items:center;
+}
+.shop-info-code-poster h3{
+    margin:0px;
+    padding:0px
+    
+}
+.shop-info-code-poster button{
+    border-radius: 10px;
+    padding:10px;
+    background:var(--yellow);
+
+}
 .shop-info{
+    background-color: whitesmoke;
+    padding-top:3rem;
+    padding-bottom:3rem;
+    border-radius:1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    margin: auto auto;
+    
+}
+.shop-info-row{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
 }
 
-.shop-info img{
+.shop-info-row img{
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -14,8 +49,9 @@
     width: 30%;
     justify-content: space-around;
     margin: auto auto;
+    
 }
-.shop-info h5{
+.shop-info-row h5{
     /* width: fit-content; */
     margin: 15px auto;  
 }
