@@ -46,7 +46,10 @@ function ShopInfo() {
         <button  onClick={() => setModalShow(true)}>
             Edit
         </button>
-        <ShopInfoModal show={modalShow} onHide={() => setModalShow(false)}/>
+        {modalShow && 
+            <ShopInfoModal show={modalShow} onHide={() => setModalShow(false)}/>
+        }
+        
     </div>
   )
 }
