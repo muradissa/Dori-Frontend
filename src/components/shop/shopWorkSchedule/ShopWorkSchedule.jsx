@@ -1,7 +1,7 @@
-import React ,{useState} from 'react'
-import {LuEdit} from 'react-icons/lu'
+import React ,{useState} from 'react';
+import {LuEdit} from 'react-icons/lu';
 import EditWorkTimeModal from './EditWorkTimeModal';
-import './shopWorkSchedule.css'
+import './shopWorkSchedule.css';
 function ShopWorkSchedule() {
   const shopHours = [
     { day: 'Sunday', open: 'Closed', close: 'Closed', breakFrom: 'Closed' ,breakTo:"Closed" },

@@ -196,10 +196,23 @@
   transition: background-color 0.3s ease;
 }
 
+
 .table-container button:hover {
   background-color: #A6ACEC;
 }
 
+/* .table-header{
+  display: flex;
+  text-align: center;
+  margin: auto auto;
+  justify-content: center;
+} */
+.table-header button{
+  
+    position: sticky;
+    left: 85%;
+
+}
 
 @media (max-width: 768px) {
   .tables-container {
