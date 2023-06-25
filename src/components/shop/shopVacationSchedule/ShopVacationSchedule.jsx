@@ -32,8 +32,8 @@ function ShopVacationSchedule() {
   const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth());
 
   return (
-    <div>
-       <div className="controls">
+    <div className='shop-vacation-schedule'>
+      <div className="controls">
           <DropdownButton id="dropdown-basic-button2" title={months[selectedMonth]} value={selectedMonth}>
             {months.map((month, index) => (
                 <Dropdown.Item key={index} value={index} onClick={(e)=>setSelectedMonth(index)}>{month}</Dropdown.Item>

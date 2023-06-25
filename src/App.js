@@ -15,6 +15,8 @@ import ShopServices from "./components/shop/shopServices/ShopServices";
 import ShopEmployes from "./components/shop/shopEmployes/ShopEmployes";
 import ShopWorkSchedule from "./components/shop/shopWorkSchedule/ShopWorkSchedule";
 import ShopVacationSchedule from "./components/shop/shopVacationSchedule/ShopVacationSchedule";
+import Sidebar from "./components/navbar/Sidebar";
+import ShopHome from "./components/shop/shopHome/ShopHome";
 
 //import ChangeAccounts from './components/changeaccounts/ChangeAccounts';
 
@@ -40,13 +42,21 @@ function App() {
   const LayoutBusiness = () => (
     <div>
         <Business></Business>   
+        
+
         <Outlet />
     </div>
   );
   const LayoutShop = () => (
     <div>
-        <Shop></Shop>   
-        <Outlet />
+        <Shop></Shop>
+        <div style={{display:"flex",gap:"1rem"}}>
+
+          <Sidebar/>
+
+          <Outlet />
+        </div>
+       
     </div>
   );
 
@@ -99,6 +109,8 @@ function App() {
               <Route exact path='/business-account/notifications' element={<Notifications/>}/> */}
 
               <Route exact path='/shop-account' element={<LayoutShop />} >
+                <Route exact path='/shop-account' element={<ShopHome/>}/>
+
                 <Route exact path='/shop-account/shop-info' element={<ShopInfo/>}/>
                 <Route exact path='/shop-account/servicees' element={<ShopServices/>}/>
                 <Route exact path='/shop-account/employees' element={<ShopEmployes/>}/>

@@ -4,8 +4,14 @@
     gap: 20px;
 }
 
-
-
+.shop-vacation-schedule{
+  width: 80%;
+  margin:  0 auto;
+}
+.shop-vacation-schedule .table-container{
+  width: 100%;
+  max-width: 100%;
+}
 
 .btn-save{
     appearance: button;
