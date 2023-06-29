@@ -32,9 +32,11 @@ function Shop() {
 
 
   return (
-    <div className='shop-account'>
-       <NavShop changeComponent={changeComponent}/>
-    </div>
+    // <div className='shop-account'>
+    //    <NavShop changeComponent={changeComponent}/>
+    // </div>
+    <>
+    </>
   )
 }
 

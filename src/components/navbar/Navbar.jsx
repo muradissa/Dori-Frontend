@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navBar" style={{}}>
       <div className="navbar-left">
         <img src={Logo} alt="Logo" className="logo" />
       </div>

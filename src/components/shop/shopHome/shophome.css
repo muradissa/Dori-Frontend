@@ -27,9 +27,14 @@
     border-radius: 1rem;
     width: 150px;
     padding: 10px;
+    align-items: center;
     /* width: 200px;
     display: flex;
     justify-content: space-between; */
+}
+.shop-home-block h5{
+    align-items: center;
+
 }
 .shop-home-block h5:first-child{
     padding-bottom: 2px;

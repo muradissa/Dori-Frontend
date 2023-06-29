@@ -201,12 +201,6 @@
   background-color: #A6ACEC;
 }
 
-/* .table-header{
-  display: flex;
-  text-align: center;
-  margin: auto auto;
-  justify-content: center;
-} */
 .table-header button{
   
     position: sticky;
@@ -221,17 +215,26 @@
 }
 
 
+/***************************   Side Bar  *****************************/
 
 .sidebar{
-  display: fixed;
-  /* position:absolute ; */
+  /* display: fixed; */
+  /* position:inherit ; */
+  position:fixed ;
+  margin-top: 65px;
   width: 250px;
   background-color: var(--primary);
 
   color: white;
-  height: 90vh;
+  /* height: 90vh;
+  max-height: 95vh; */
+  height: -webkit-fill-available;
+  /* padding-bottom: 20vh;
+  margin-bottom: 10vh; */
 }
 .sidebar .nav-link{
+
+  display: flex;
   color: white;
   /* background-color: var(--secondory); */
   border-radius: 0 2rem 2rem 0;
@@ -264,6 +267,7 @@
   width: 240px;
   
   position: absolute;
-  bottom: 0px;
+  bottom: 15px;
+  /* padding-bottom: 10vh; */
 
 }

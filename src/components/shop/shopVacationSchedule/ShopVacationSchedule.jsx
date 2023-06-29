@@ -33,23 +33,27 @@ function ShopVacationSchedule() {
 
   return (
     <div className='shop-vacation-schedule'>
-      <div className="controls">
-          <DropdownButton id="dropdown-basic-button2" title={months[selectedMonth]} value={selectedMonth}>
-            {months.map((month, index) => (
-                <Dropdown.Item key={index} value={index} onClick={(e)=>setSelectedMonth(index)}>{month}</Dropdown.Item>
-            ))}
-          </DropdownButton>
-          <DropdownButton id="dropdown-basic-button3" title={selectedYear} value={selectedYear}>
-                  <Dropdown.Item key={2023} value={2023} onClick={(e)=>setSelectedYear(2023)}>{2023}</Dropdown.Item>
-                  <Dropdown.Item key={2024} value={2024} onClick={(e)=>setSelectedYear(2024)}>{2024}</Dropdown.Item>
-                  <Dropdown.Item key={2025} value={2025} onClick={(e)=>setSelectedYear(2025)}>{2025}</Dropdown.Item>
-          </DropdownButton>
-      </div>
+      
     
       <div className="table-container">
 
         <div className="table">
           <h2>Vacation Schedule</h2>
+          <div className="shop-vacation-schedule-controls">
+            <DropdownButton id="dropdown-vacation-button1" title={months[selectedMonth]} value={selectedMonth}>
+              {months.map((month, index) => (
+                  <Dropdown.Item key={index} value={index} onClick={(e)=>setSelectedMonth(index)}>{month}</Dropdown.Item>
+              ))}
+            </DropdownButton>
+            <DropdownButton id="dropdown-vacation-button2" title={selectedYear} value={selectedYear}>
+                    <Dropdown.Item key={2023} value={2023} onClick={(e)=>setSelectedYear(2023)}>{2023}</Dropdown.Item>
+                    <Dropdown.Item key={2024} value={2024} onClick={(e)=>setSelectedYear(2024)}>{2024}</Dropdown.Item>
+                    <Dropdown.Item key={2025} value={2025} onClick={(e)=>setSelectedYear(2025)}>{2025}</Dropdown.Item>
+            </DropdownButton>
+            <button  className='btn-primary' style={{marginLeft:"auto"}}>
+                New Vacation +
+            </button>
+          </div>
           <div></div>
           <table>
             <thead>

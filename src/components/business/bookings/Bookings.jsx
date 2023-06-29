@@ -9,6 +9,7 @@ import 'react-datepicker/dist/react-datepicker.css'; // Import the default CSS s
 
 import {AiOutlineEdit,AiFillWarning} from 'react-icons/ai'; 
 import {FcCheckmark} from 'react-icons/fc'; 
+import {LuEdit} from 'react-icons/lu';
 
 
 
@@ -42,7 +43,7 @@ function Bookings() {
   return (
     <div className='table-container'>
 
-      <div className='bookings-choosing-date'>
+      {/* <div className='bookings-choosing-date'>
         <DropdownButton id="dropdown-basic-button" title={selectedDropDownDate}>
           <Dropdown.Item onClick={()=>setSelectedDropDownDate('Today')}>Today</Dropdown.Item>
           <Dropdown.Item onClick={()=>setSelectedDropDownDate('Tommorow')}>Tommorow</Dropdown.Item>
@@ -60,11 +61,28 @@ function Bookings() {
             />
           </div>
         }
-        
-
-      </div>
+      </div> */}
       <div className="table">
         <h2>Bookings</h2>
+        <div className='bookings-choosing-date'>
+          <DropdownButton id="dropdown-booking-button" title={selectedDropDownDate}>
+            <Dropdown.Item onClick={()=>setSelectedDropDownDate('Today')}>Today</Dropdown.Item>
+            <Dropdown.Item onClick={()=>setSelectedDropDownDate('Tommorow')}>Tommorow</Dropdown.Item>
+            <Dropdown.Item onClick={()=>setSelectedDropDownDate('Choose Date')}>Choose Date</Dropdown.Item>
+          </DropdownButton>
+
+          { selectedDropDownDate === 'Choose Date'&&
+            <div className="datepicker-choosing-date ">
+              <DatePicker
+                selected={selectedDate}
+                onChange={handleDateChange}
+                dateFormat="dd/MM/yyyy"
+                placeholderText="Select a date"
+                className="datepicker-input"
+              />
+            </div>
+          }
+        </div>
         <table>
           <thead>
             <tr>
@@ -101,7 +119,9 @@ function Bookings() {
 
                 }
 
-                <td><button>Edit <AiOutlineEdit/></button></td>
+                {/* <td><button>Edit <AiOutlineEdit/></button></td> */}
+                <td><LuEdit style={{color:"green"}}/></td>
+
               </tr>
             ))}
           </tbody>

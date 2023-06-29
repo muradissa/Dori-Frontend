@@ -53,8 +53,10 @@ function App() {
         <div style={{display:"flex",gap:"1rem"}}>
 
           <Sidebar/>
+          <div style={{display:"flex",width:"100%",marginLeft:"250px",marginTop:"100px"}}>
+            <Outlet />
 
-          <Outlet />
+          </div>
         </div>
        
     </div>
@@ -109,8 +111,10 @@ function App() {
               <Route exact path='/business-account/notifications' element={<Notifications/>}/> */}
 
               <Route exact path='/shop-account' element={<LayoutShop />} >
+                
                 <Route exact path='/shop-account' element={<ShopHome/>}/>
-
+                <Route exact path='/shop-account/bookings' element={<Bookings/>}/>
+                <Route exact path='/shop-account/notifications' element={<Notifications/>}/>
                 <Route exact path='/shop-account/shop-info' element={<ShopInfo/>}/>
                 <Route exact path='/shop-account/servicees' element={<ShopServices/>}/>
                 <Route exact path='/shop-account/employees' element={<ShopEmployes/>}/>

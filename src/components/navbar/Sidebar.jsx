@@ -7,7 +7,9 @@ import {BsFillBookmarkStarFill,
 import {IoNotifications} from "react-icons/io";
 import {GrServices} from "react-icons/gr";
 import {FaUsers ,FaUmbrellaBeach} from "react-icons/fa";
-import {MdNotificationsActive,MdWorkHistory,MdOutlineMiscellaneousServices} from "react-icons/md";
+import {MdNotificationsActive,MdWorkHistory,
+  MdBusinessCenter,MdOutlineMiscellaneousServices} from "react-icons/md";
+import {BiLogOut} from "react-icons/bi";
 
 
 
@@ -19,7 +21,16 @@ function Sidebar() {
   
     const changeComponent =(selectComponent) =>{
     //   setSelect(selectComponent);
-        if(selectComponent ==="Shop Info"){
+      if(selectComponent ==="Home"){
+        navigate("/shop-account");  
+      }
+      else if(selectComponent ==="Bookings"){
+        navigate("/shop-account/bookings");  
+      }
+      else if(selectComponent ==="Notifications"){
+        navigate("/shop-account/notifications");
+      }
+      else if(selectComponent ==="Shop Info"){
         navigate("/shop-account/shop-info");  
       }
       else if(selectComponent ==="Servicees"){
@@ -42,19 +53,22 @@ function Sidebar() {
     <div className='sidebar'>
          {/* <Nav defaultActiveKey="/home" className="flex-column"> */}
          <br/>
-         <Nav defaultActiveKey="" className="flex-column">
-            <Nav.Link href="/shop-account">
+         <Nav defaultActiveKey="link-11" className="flex-column">
+            {/* <Nav.Link href="/shop-account">
+                <AiFillHome className='sidebar-icon'/>Home
+            </Nav.Link> */}
+            <Nav.Link eventKey="link-11" onClick={()=> changeComponent("Home")}>
                 <AiFillHome className='sidebar-icon'/>Home
             </Nav.Link>
             <hr/>
-            <Nav.Link href="/business-account/bookings" eventKey="link-1">
-                <BsFillBookmarkStarFill className='sidebar-icon'/>Booking
+            <Nav.Link onClick={()=> changeComponent("Bookings")} eventKey="link-1">
+                <BsFillBookmarkStarFill className='sidebar-icon'/>Bookings
             </Nav.Link>
-            <Nav.Link eventKey="link-2">
+            <Nav.Link onClick={()=> changeComponent("Notifications")} eventKey="link-2">
                 <MdNotificationsActive className='sidebar-icon'/>Notifications
             </Nav.Link>
             <hr/>
-            <Nav.Link onClick={()=> changeComponent("Shop Info")}  eventKey="link-3">
+            <Nav.Link onClick={()=> changeComponent("Shop Info")} eventKey="link-3">
                 <BsFillInfoCircleFill className='sidebar-icon'/>Shop Info
             </Nav.Link>
             <Nav.Link onClick={()=> changeComponent("Servicees")} eventKey="link-4">
@@ -78,10 +92,10 @@ function Sidebar() {
             <hr/>
                 
                 <Nav.Link onClick={()=> changeComponent("Business Account")} eventKey="link-9">
-                    <FaUmbrellaBeach className='sidebar-icon'/>Business Account
+                    <MdBusinessCenter className='sidebar-icon'/>Business Account
                 </Nav.Link>
                 <Nav.Link onClick={()=> changeComponent("Logout")} eventKey="link-10">
-                    <AiTwotoneSetting className='sidebar-icon'/>Logout
+                    <BiLogOut className='sidebar-icon'/>Logout
                 </Nav.Link>
             </div>
 

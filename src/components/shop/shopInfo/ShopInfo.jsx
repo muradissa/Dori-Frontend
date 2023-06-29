@@ -16,6 +16,8 @@ function ShopInfo() {
  
   return (
     <div className="shop-info">
+        <h2 style={{marginBottom:"2rem"}}>Shop Info</h2>
+
         <div className='shop-info-code-poster'>
             <h3 >Code : c3g5h1</h3>
             <button className='btn-secondary'  onClick={()=>{

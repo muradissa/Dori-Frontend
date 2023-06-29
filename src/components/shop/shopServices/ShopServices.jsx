@@ -38,6 +38,7 @@ function ShopServices() {
 
     return (
         <div className='shop-services-container'> 
+            <h2>Services</h2>
             <div className='shop-services'>
                 {services.map(item => 
                 <div className='shop-services-item' onClick={() => EditServiceFunction(item)}>
@@ -47,8 +48,11 @@ function ShopServices() {
                     
                 )}
             </div>
-            <button className="btn-save" onClick={() => setModalShowNewService(true)} >
+            {/* <button className="btn-save" onClick={() => setModalShowNewService(true)} >
                 New Service
+            </button> */}
+            <button  className='btn-primary' onClick={() => setModalShowNewService(true)}>
+                New Service +
             </button>
 
             { modalShowEditService &&
