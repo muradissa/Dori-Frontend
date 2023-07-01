@@ -188,6 +188,7 @@
 }
 .tip-message-box{
     display: flex;
+    /* padding-bottom: 10px; */
     
     /* text-align: start; */
     /* justify-content: space-between; */
@@ -203,6 +204,13 @@
     background: none;
     padding: 0px 10px;
     border: none;
+}
+.container-fluid p{
+    margin: auto auto;
+    font-size: 16px;
+}
+.tip-message-box-date{
+    font-size: 14px;
 }
 /***Success****/
 
@@ -358,3 +366,6 @@
 }
 
 
+/* .container-fluid p{
+    margin: auto auto;
+} */
