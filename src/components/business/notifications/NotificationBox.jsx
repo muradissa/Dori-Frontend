@@ -213,7 +213,7 @@ function NotificationBox() {
 
         { notificationsData.length !== 0 && notificationsData.map(notification =>(
             <div className="row">
-                <div className="col-xs-12 col-sm-8 col-sm-offset-3">
+                <div className="col-xs-12 col-sm-12 col-sm-offset-3">
                     <div className="new-message-box">
                         <div className={`new-message-box-${checkNotificationStatus(notification.status)}`}>
                             {
