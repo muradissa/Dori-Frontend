@@ -27,20 +27,18 @@
     align-items: end; */
     text-align: start;
 }
-.form-check-inline{
+.notifications .form-check-inline{
     border: 2px solid #eeeeee;
     padding: 5px 10px 5px 30px;
     border-radius: 8px ;
     cursor: pointer;
     align-items: end;
-
-
 }
-.form-check-inline label{
+.notifications .form-check-inline label{
     cursor: pointer;
 
 }
-.form-check-inline:nth-child(1){
+.notifications .form-check-inline:nth-child(1){
     cursor: pointer;
 
     padding: 5px 10px 5px 30px;
@@ -48,11 +46,11 @@
     background: #DCEDC8;
 
 }
-.form-check-inline:nth-child(2){
+.notifications .form-check-inline:nth-child(2){
     color: #01579B;
     background: #B3E5FC;
 }
-.form-check-inline:nth-child(3){
+.notifications .form-check-inline:nth-child(3){
     color: #b71c1c;
     background: #FFCCBC;
 }

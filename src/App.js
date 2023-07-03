@@ -17,6 +17,7 @@ import ShopWorkSchedule from "./components/shop/shopWorkSchedule/ShopWorkSchedul
 import ShopVacationSchedule from "./components/shop/shopVacationSchedule/ShopVacationSchedule";
 import Sidebar from "./components/navbar/Sidebar";
 import ShopHome from "./components/shop/shopHome/ShopHome";
+import ShopSettings from "./components/shop/shopSettings/ShopSettings";
 
 //import ChangeAccounts from './components/changeaccounts/ChangeAccounts';
 
@@ -120,7 +121,7 @@ function App() {
                 <Route exact path='/shop-account/employees' element={<ShopEmployes/>}/>
                 <Route exact path='/shop-account/worktime' element={<ShopWorkSchedule/>}/>
                 <Route exact path='/shop-account/vacations' element={<ShopVacationSchedule/>}/>
-                <Route exact path='/shop-account/shop-settings' element={<ShopInfo/>}/>
+                <Route exact path='/shop-account/shop-settings' element={<ShopSettings/>}/>
 
               </Route> 
 

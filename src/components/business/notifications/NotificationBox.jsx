@@ -181,6 +181,44 @@ function NotificationBox() {
             return 'info';
         }
     }
+
+    const orderNotificationsByDateTime = (data ,shouldReverse) => {
+        // Create a copy of the original array to avoid modifying it directly
+        var sortedData = [...data];
+      
+        sortedData.sort((a, b) => {
+          // Compare notificationDate
+          const notificationDateA = new Date(a.notificationDate);
+          const notificationDateB = new Date(b.notificationDate);
+      
+          if (notificationDateA < notificationDateB) {
+            return -1;
+          } else if (notificationDateA > notificationDateB) {
+            return 1;
+          }
+      
+          // If notificationDate is the same, compare notificationTime
+          const notificationTimeA = a.notificationTime;
+          const notificationTimeB = b.notificationTime;
+      
+          if (notificationTimeA < notificationTimeB) {
+            return -1;
+          } else if (notificationTimeA > notificationTimeB) {
+            return 1;
+          }
+      
+          return 0;
+        });
+
+        if (shouldReverse){
+            sortedData = sortedData.reverse();
+        }
+      
+        return sortedData;
+      };
+      
+    //   const sortedNotificationsData = orderNotificationsByDateTime(notificationsData);
+      
   return (
     <div className="container-fluid text-center">
         {/* { waitingNotifications.length !== 0 && waitingNotifications.map(notification =>(

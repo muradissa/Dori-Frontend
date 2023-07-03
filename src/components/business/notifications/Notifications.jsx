@@ -19,7 +19,7 @@ function Notifications() {
   };
   return (
     <div className='notifications'>
-      <h1>Notifications</h1>
+      <h2>Notifications</h2>
           <div className='notifications-order-filter'>
               {/** Order */}
               <div className='notifications-order'>
