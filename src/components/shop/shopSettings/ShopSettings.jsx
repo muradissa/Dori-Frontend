@@ -22,8 +22,7 @@ function ShopSettings() {
     return (
         <div className='business-settings'>
             {/* customers */}
-          <h2 >Settings</h2>
-
+            <h2 >Settings</h2>
             <div className='business-settings-switches'>
                 <Form>     
                     <Form.Check
@@ -39,6 +38,7 @@ function ShopSettings() {
                     />
                 </Form>
              </div>
+
              <br/>
 
             <div className='notifications-orderrrr'>
@@ -49,68 +49,61 @@ function ShopSettings() {
                 ))}
                 </DropdownButton>
             </div>
+
             <hr></hr>
+
             {/* employess */}
             <Form>
-            <h6>How can accept bookings :</h6>
-            <div key={`inline-radio`} className="mb-3">
-                
-                
-                <Form.Check
-                    inline
-                    label="All Employess"
-                    name="group101"
-                    type="radio"
-                    id={`inline-radio-33`}
-                />
-                <Form.Check
-                    inline
-                    label="Owenr"
-                    name="group101"
-                    type="radio"
-                    id={`inline-radio-22`}
-                />
-                <Form.Check
-                    inline
-                    label="Automatically"
-                    name="group101"
-                    type="radio"
-                    id={`inline-radio-11`}
-                />
-            </div>
+                <h6>How can accept bookings :</h6>
+                <div key={`inline-radio`} className="mb-3">
+                    <Form.Check
+                        inline
+                        label="All Employess"
+                        name="group101"
+                        type="radio"
+                        id={`inline-radio-33`}
+                    />
+                    <Form.Check
+                        inline
+                        label="Owenr"
+                        name="group101"
+                        type="radio"
+                        id={`inline-radio-22`}
+                    />
+                    <Form.Check
+                        inline
+                        label="Automatically"
+                        name="group101"
+                        type="radio"
+                        id={`inline-radio-11`}
+                    />
+                </div>
 
-            <br/>    
+                <br/>    
 
-            <h6>how can cancel bookings :</h6>
-            <div key={`inline-radio`} className="mb-3">
-                {/* <Form.Check
-                    inline
-                    label="Automatically"
-                    name="group102"
-                    type="radio"
-                    id={`inline-radio-1122`}
-                /> */}
-                <Form.Check
-                    inline
-                    name="group102"
-                    label="All Employess"
-                    type="radio"
-                    id={`inline-radio-3322`}
-                />
-                <Form.Check
-                    inline
-                    label="Owenr"
-                    name="group102"
-                    type="radio"
-                    id={`inline-radio-2222`}
-                />
-                
-            </div>
+                <h6>how can cancel bookings :</h6>
+                <div key={`inline-radio`} className="mb-3">
+                    <Form.Check
+                        inline
+                        name="group102"
+                        label="All Employess"
+                        type="radio"
+                        id={`inline-radio-3322`}
+                    />
+                    <Form.Check
+                        inline
+                        label="Owenr"
+                        name="group102"
+                        type="radio"
+                        id={`inline-radio-2222`}
+                    />
+                </div>
             </Form>
           
             <hr></hr>
+
             {/* shop */}
-            <div className='notifications-orderrrr'>
+            <div className=''>
                 <h6>choose time between free appointment can be :</h6>
                 <DropdownButton id="dropdown-vacation-button1" title={freeTimeAppi[selectedFreeTime]} value={selectedFreeTime}>
                 {freeTimeAppi.map((item, index) => (
@@ -126,8 +119,8 @@ function ShopSettings() {
                 SAVE CHANGES
             </Button>
 
-    </div>
-  )
+        </div>
+    )
 }
 
 export default ShopSettings
