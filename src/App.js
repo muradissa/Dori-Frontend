@@ -18,6 +18,7 @@ import ShopVacationSchedule from "./components/shop/shopVacationSchedule/ShopVac
 import Sidebar from "./components/navbar/Sidebar";
 import ShopHome from "./components/shop/shopHome/ShopHome";
 import ShopSettings from "./components/shop/shopSettings/ShopSettings";
+import Register from "./components/register/Register";
 
 //import ChangeAccounts from './components/changeaccounts/ChangeAccounts';
 
@@ -83,6 +84,7 @@ function App() {
             <Route element={<LayoutHome />} >
             <Route exact path='/' element={<Home/>}/>
               <Route exact path='/login' element={<Login/>}/>
+              <Route exact path='/register' element={<Register/>}/>
               {/* <Route exact path='/signup' element={<Signup2/>}/> */}
             </Route>
         </Routes>  
