@@ -9,7 +9,9 @@ import {MdSettings,MdBusinessCenter} from 'react-icons/md';
 import {BsPersonCircle} from 'react-icons/bs';
 import {MdStoreMallDirectory} from 'react-icons/md';
 import { useNavigate  } from "react-router-dom";
-
+import { useSelector, useDispatch } from 'react-redux';
+import { useLogoutMutation } from '../../slices/usersApiSlice';
+import { logout } from '../../slices/authSlice';
 
 
 
@@ -17,7 +19,8 @@ import { useNavigate  } from "react-router-dom";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navigate = useNavigate ();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const openRegisterPage = () =>{
     navigate("/register")  
@@ -26,6 +29,28 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const { userInfo } = useSelector((state) => state.auth);
+
+
+
+  const [logoutApiCall] = useLogoutMutation();
+
+  const logoutHandler = async () => {
+   
+    try {
+      await logoutApiCall().unwrap();
+      dispatch(logout());
+      navigate('/login');
+      alert("logout");
+    } catch (err) {
+      console.log(err);
+
+      console.error(err);
+      alert("logout err");
+    }
+  };
+
 
   return (
     <nav className="navBar" style={{}}>
@@ -48,7 +73,7 @@ const Navbar = () => {
 
             <NavDropdown.Item href="#action/3.3"><MdSettings style={{scale:"1.2"}}/> Settings</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">
+            <NavDropdown.Item href="" onClick={logoutHandler}>
               <BiLogOut style={{scale:"1.2"}}/> Logout 
             </NavDropdown.Item>
           </NavDropdown>

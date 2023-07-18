@@ -11,7 +11,7 @@ import {SiGmail} from  'react-icons/si';
 import './login.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-// test@test.com
+// ceo@ceo.com
 const Login = () => {
   const navigate = useNavigate ();
   const dispatch = useDispatch();
