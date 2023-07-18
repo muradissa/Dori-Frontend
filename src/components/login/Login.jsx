@@ -1,5 +1,6 @@
 import React, { useState , useEffect} from 'react';
-import { Link, useNavigate  } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom';
+import { Form, Button, Row, Col } from 'react-bootstrap';
 import {SiGmail} from  'react-icons/si';
 import './login.css';
 
@@ -15,12 +16,11 @@ const Login = () => {
     password: '',
   });
   const { email, password } = formData
-  const [country, setCountry] = useState('');
 
   const loginEventHandler = async () =>{
-      console.log(email)
-      console.log(password)
-      console.log(formData)
+      // console.log(email)
+      // console.log(password)
+      // console.log(formData)
       alert("Login")
 
       try {
@@ -40,22 +40,9 @@ const Login = () => {
     }))
   }
 
-
-  useEffect(() => {
-    fetch('https://ipapi.co/json/')
-      .then((response) => response.json())
-      .then((data) => {
-        setCountry(data.country_name);
-      })
-      .catch((error) => {
-        console.error('Error fetching geolocation:', error);
-      });
-  }, []);
-
   return (
     <div className="login-container">
       <h1>Login</h1>
-      <p>Your country: {country}</p>
 
       <div className="login-options">
         <p>Login with:</p>
@@ -76,7 +63,12 @@ const Login = () => {
         <br></br>
         <a href="#" className="forgot-password">Forgot Password?</a>
         <br></br>
-        <h6>New User ? <a href="#">Register</a></h6>
+        {/* <h6>New User ? <a href="/register">Register</a></h6> */}
+        <Row className='py-3'>
+          <Col>
+            Don't have account? <Link to={`/register`} >Register</Link>
+          </Col>
+        </Row>
         {/* <h6>Already have an account ? <a href="#">l=Login</a></h6> */}
 
       </form>
