@@ -96,7 +96,7 @@ const Register = () => {
     fetch('https://ipapi.co/json/')
       .then((response) => response.json())
       .then((data) => {
-        setCountry(selectedCountry);
+        setCountry(data.country_name);
         setSelectedCountry(data.country_name);
       })
       .catch((error) => {

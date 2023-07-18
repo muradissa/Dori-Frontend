@@ -19,6 +19,7 @@ import Sidebar from "./components/navbar/Sidebar";
 import ShopHome from "./components/shop/shopHome/ShopHome";
 import ShopSettings from "./components/shop/shopSettings/ShopSettings";
 import Register from "./components/register/Register";
+import PrivateRoute from "./components/global/PrivateRoute";
 
 //import ChangeAccounts from './components/changeaccounts/ChangeAccounts';
 
@@ -112,21 +113,21 @@ function App() {
               {/* <Route  path='/business-account' element={<Business/>}/>
               <Route exact path='/business-account/bookings' element={<Bookings/>}/>
               <Route exact path='/business-account/notifications' element={<Notifications/>}/> */}
+              <Route path='' element={<PrivateRoute />}>
+                <Route exact path='/shop-account' element={<LayoutShop />} >
+                  
+                  <Route exact path='/shop-account' element={<ShopHome/>}/>
+                  <Route exact path='/shop-account/bookings' element={<Bookings/>}/>
+                  <Route exact path='/shop-account/notifications' element={<Notifications/>}/>
+                  <Route exact path='/shop-account/shop-info' element={<ShopInfo/>}/>
+                  <Route exact path='/shop-account/servicees' element={<ShopServices/>}/>
+                  <Route exact path='/shop-account/employees' element={<ShopEmployes/>}/>
+                  <Route exact path='/shop-account/worktime' element={<ShopWorkSchedule/>}/>
+                  <Route exact path='/shop-account/vacations' element={<ShopVacationSchedule/>}/>
+                  <Route exact path='/shop-account/shop-settings' element={<ShopSettings/>}/>
 
-              <Route exact path='/shop-account' element={<LayoutShop />} >
-                
-                <Route exact path='/shop-account' element={<ShopHome/>}/>
-                <Route exact path='/shop-account/bookings' element={<Bookings/>}/>
-                <Route exact path='/shop-account/notifications' element={<Notifications/>}/>
-                <Route exact path='/shop-account/shop-info' element={<ShopInfo/>}/>
-                <Route exact path='/shop-account/servicees' element={<ShopServices/>}/>
-                <Route exact path='/shop-account/employees' element={<ShopEmployes/>}/>
-                <Route exact path='/shop-account/worktime' element={<ShopWorkSchedule/>}/>
-                <Route exact path='/shop-account/vacations' element={<ShopVacationSchedule/>}/>
-                <Route exact path='/shop-account/shop-settings' element={<ShopSettings/>}/>
-
-              </Route> 
-
+                </Route> 
+              </Route>
             </Route>
           {/* </Route>                */}
         </Routes>  
