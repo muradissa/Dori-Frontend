@@ -8,7 +8,7 @@ import {IoNotifications} from "react-icons/io";
 import {GrServices} from "react-icons/gr";
 import {FaUsers ,FaUmbrellaBeach} from "react-icons/fa";
 import {MdNotificationsActive,MdWorkHistory,
-  MdBusinessCenter,MdOutlineMiscellaneousServices} from "react-icons/md";
+  MdBusinessCenter,MdOutlineMiscellaneousServices,MdUpgrade} from "react-icons/md";
 import {BiLogOut} from "react-icons/bi";
 
 
@@ -48,6 +48,10 @@ function Sidebar() {
       else if(selectComponent ==="Settings"){
         navigate("/shop-account/shop-settings");
       }
+      else if(selectComponent ==="Upgrade Account"){
+        navigate("/shop-account/upgrade-account");
+      }
+      ///shop-account/upgrade-account
     }
   return (
     <div className='sidebar'>
@@ -94,8 +98,11 @@ function Sidebar() {
                 <Nav.Link onClick={()=> changeComponent("Business Account")} eventKey="link-9">
                     <MdBusinessCenter className='sidebar-icon'/>Business Account
                 </Nav.Link>
-                <Nav.Link onClick={()=> changeComponent("Logout")} eventKey="link-10">
-                    <BiLogOut className='sidebar-icon'/>Logout
+                <Nav.Link onClick={()=> changeComponent("Upgrade Account")} eventKey="link-10">
+                    <MdUpgrade className='sidebar-icon'/>Upgrade
+                </Nav.Link>
+                <Nav.Link onClick={()=> changeComponent("Logout")} eventKey="link-12">
+                    < BiLogOut className='sidebar-icon'/>Logout
                 </Nav.Link>
             </div>
 

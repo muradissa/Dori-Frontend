@@ -20,6 +20,7 @@ import ShopHome from "./components/shop/shopHome/ShopHome";
 import ShopSettings from "./components/shop/shopSettings/ShopSettings";
 import Register from "./components/register/Register";
 import PrivateRoute from "./components/global/PrivateRoute";
+import UpgradeAccount from "./components/business/upgradeAccount/UpgradeAccount";
 
 //import ChangeAccounts from './components/changeaccounts/ChangeAccounts';
 
@@ -126,6 +127,8 @@ function App() {
                   <Route exact path='/shop-account/worktime' element={<ShopWorkSchedule/>}/>
                   <Route exact path='/shop-account/vacations' element={<ShopVacationSchedule/>}/>
                   <Route exact path='/shop-account/shop-settings' element={<ShopSettings/>}/>
+                  <Route exact path='/shop-account/upgrade-account' element={<UpgradeAccount/>}/>
+
 
                 </Route> 
               </Route>
