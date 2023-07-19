@@ -30,9 +30,6 @@ const Login = () => {
   const { userInfo } = useSelector((state) => state.auth);
 
   // const loginEventHandler = async () =>{
-
-  //     alert("Login")
-
   //     try {
   //       setError("")
   //       setLoading(true)
@@ -45,7 +42,6 @@ const Login = () => {
 
   const loginEventHandler = async (e) => {
 
-    alert(email)
     e.preventDefault();
     try {
       const res = await login({ email, password }).unwrap();
@@ -65,7 +61,8 @@ const Login = () => {
 
   useEffect(() => {
     if (userInfo) {
-      navigate('/');
+      navigate('/personal-account');
+      // navigate('/');
     }
   }, [navigate, userInfo]);
 

@@ -41,6 +41,9 @@
     border-bottom: 2px solid white;
     align-items: center;
 }
+.shop-home-block h5:nth-child(2){
+    margin-bottom: 0px;
+}
 .shop-home-row2 {
 
     max-height: 70vh;

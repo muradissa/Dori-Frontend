@@ -62,7 +62,6 @@ const Register = () => {
   useEffect(() => {
     if (userInfo) {
       navigate('/');
-      alert("useEffect if userInfo")
     }
   }, [navigate, userInfo]);
 

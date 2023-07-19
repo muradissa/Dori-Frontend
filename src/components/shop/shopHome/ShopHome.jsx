@@ -17,31 +17,37 @@ function ShopHome() {
 
   return (
     <div className='shop-home'>
+   
+
         <div className='shop-home-row1'>
             <h3>
                 Summary of appointments for today
             </h3>
             <div className='shop-home-blocks'>
-                <div className='shop-home-block'>
+                {/* <div className='shop-home-block'>
                     <h5>All</h5>
                     <h5>20</h5>
-                </div>
+                </div> */}
                 <div className='shop-home-block'>
-                    <h5><FcApproval style={{scale:"1.2"}}/> Accepted </h5>
+                    <h5>Accepted <FcApproval style={{scale:"1.2"}}/>  </h5>
                     <h5>14</h5>
                 </div>
                 <div className='shop-home-block'>
-                    <h5><AiFillWarning style={{color:"orange",scale:"1.2"}}/> Waiting</h5>
+                    <h5>Waiting <AiFillWarning style={{color:"orange",scale:"1.2"}}/> </h5>
                     <h5>4</h5>
                 </div>
                 <div className='shop-home-block'>
-                    <h5><FcCancel  style={{scale:"1.2"}}/> Canceled</h5>
+                    <h5>Canceled <FcCancel  style={{scale:"1.2"}}/> </h5>
                     <h5>2</h5>
                 </div>
             </div>    
         </div>
         <hr></hr>
+        {/* <h3>
+            Month
+        </h3>  */}
         <div className="shop-home-row2-controls">
+              
             <DropdownButton id="dropdown-basic-button22" title={months[selectedMonth]} value={selectedMonth}>
                 {months.map((month, index) => (
                     <Dropdown.Item key={index} value={index} onClick={(e)=>setSelectedMonth(index)}>{month}</Dropdown.Item>

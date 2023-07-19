@@ -52,7 +52,7 @@ function App() {
   );
   const LayoutShop = () => (
     <div>
-        <Shop></Shop>
+        {/* <Shop></Shop> */}
         <div style={{display:"flex",gap:"1rem"}}>
 
           <Sidebar/>
@@ -97,10 +97,11 @@ function App() {
               {/* <Route path='/business-account' element={<Business/>}>
                 <Route exact path='/business-account/notifications' element={<Notifications/>}/>
               </Route> */}
-              <Route exact path='/shop-account' element={<Shop/>}/>
+              {/* <Route exact path='/shop-account' element={<Shop/>}/> */}
               {/* <Route path='/business-account/notifications' element={<Notifications/>}/> */}
             
               <Route exact path='/personal-account' element={<LayoutPersonal />} >
+                <Route exact path='/personal-account' element={<NewBooking/>}/>
                 <Route exact path='/personal-account/newbooking' element={<NewBooking/>}/>
                 <Route exact path='/personal-account/mybookings' element={<MyBookings/>}/>
               </Route> 

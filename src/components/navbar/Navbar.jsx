@@ -42,10 +42,7 @@ const Navbar = () => {
       await logoutApiCall().unwrap();
       dispatch(logout());
       navigate('/login');
-      alert("logout");
     } catch (err) {
-      console.log(err);
-
       console.error(err);
       alert("logout err");
     }
@@ -58,8 +55,10 @@ const Navbar = () => {
         <img src={Logo} alt="Logo" className="logo" />
       </div>
       <div className="navbar-right">
-        <button className="signup-button" onClick={openRegisterPage}>Sign Up</button>
-
+        {!userInfo &&
+          <button className="signup-button" onClick={openRegisterPage}>Sign Up</button>
+        }
+        {userInfo &&
         <Nav>
           <NavDropdown
             id="nav-dropdown-dark-example"
@@ -78,6 +77,7 @@ const Navbar = () => {
             </NavDropdown.Item>
           </NavDropdown>
         </Nav>
+        }
       </div>
     </nav>
   );
