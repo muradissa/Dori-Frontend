@@ -47,7 +47,8 @@
 
    .pricing-area{
      /* margin-top: 100px ; */
-     margin: 0
+     margin: 0;
+     width: 100%;
    }
    .row{
     display: flex;
@@ -56,8 +57,8 @@
    .single-price {
     text-align: center;
     background: #262626;
-    transition: .7s;
-    margin-top: 20px;
+    transition: .5s;
+    /* margin-top: 20px; */
     width: 350px;
     border-radius: 2rem;
     /* border: 1px solid #d9e903; */
@@ -83,6 +84,12 @@
     vertical-align: text-top;
     font-size: 25px;
   }
+  .single-price h4 .sup-month{
+    font-size: 14px;
+    color:rgb(168, 168, 168)
+
+  }
+  
   .deal-top {
     position: relative;
     background: var(--primary);
@@ -90,6 +97,8 @@
     text-transform: uppercase;
     padding: 136px 24px 0;
     border-radius: 2rem 2rem 0rem 0rem;
+    transition: transform 0.6s ease, box-shadow 0.6s ease, border-top 2.6s ease;
+
     /* padding-top: 50px; */
   }
   .deal-top::after {
@@ -102,6 +111,7 @@
     border-top: 50px solid var(--primary);
     border-left: 175px solid transparent;
     border-right: 175px solid transparent;
+    transition: transform 0.6s ease, box-shadow 0.9s, ease border-top 2.6s ease;
     
   }
   .deal-bottom {
@@ -111,6 +121,17 @@
     margin: 0;
     padding: 0;
   }
+  /* .deal-item{
+
+  } */
+  .deal-bottom  ul li:nth-child(1) {
+    /* text-style:bold; */
+    /* color:w; */
+    text-align: start;
+    font-weight: bold;
+    padding-left: 10px;
+    /* text */
+  }
   .deal-bottom  ul li {
     font-size: 16px;
     color: #fff;
@@ -118,9 +139,16 @@
     margin-top: 16px;
     border-top: 1px solid #E4E4E4;
     padding-top: 16px;
+    text-align: start;
+    padding-left: 20px;
+
     list-style: none;
   }
-  .btn-area a {
+  .deal-item-icon{
+    margin-right:10px;
+    padding-right: 0px;
+}
+  .btn-area button{
     display: inline-block;
     font-size: 18px;
     color: #fff;
@@ -142,7 +170,7 @@
   .single-price:hover .deal-top {
     background: whitesmoke;
     color:#000;
-    transition: 0.3s ;
+    transition: transform 0.8s ease, box-shadow 0.6s ease ,border-top 2.6s ease;
 
   }
   .single-price:hover h3{
@@ -158,9 +186,11 @@
     border-top: 75px solid whitesmoke;
     bottom: -75px;
     /* transition: 0.3s; */
-    box-shadow: 0 -3px 5px rgb(241, 241, 4) ;
+    /* box-shadow: 0 -3px 5px rgb(241, 241, 4) ; */
+    /* box-shadow: 0 -1px 5px rgb(158, 20, 185); */
+
   }
-  .single-price:hover .btn-area a {
+  .single-price:hover .btn-area button {
     background: #262626;
     background: whitesmoke;
     color:#000

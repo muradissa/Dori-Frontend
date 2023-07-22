@@ -1,114 +1,63 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate  } from "react-router-dom";
 import './plans.css';
+import {AiOutlinePlus} from 'react-icons/ai'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Plans = () => {
-  return (
-    // <div className="plans-container">
-    //   <div className="row">
-    //     <div className="col-md-4 mb-4">
-    //       <div className="plan-card">
-    //         <div className="plan-title">Plan 1</div>
-    //         <div className="plan-price">$10/month</div>
-    //         <ul className="plan-features">
-    //           <li>Feature 1</li>
-    //           <li>Feature 2</li>
-    //           <li>Feature 3</li>
-    //         </ul>
-    //         <button className="btn btn-primary plan-button">Select Plan</button>
-    //       </div>
-    //     </div>
 
-    //     <div className="col-md-4 mb-4">
-    //       <div className="plan-card">
-    //         <div className="plan-title">Plan 2</div>
-    //         <div className="plan-price">$20/month</div>
-    //         <ul className="plan-features">
-    //           <li>Feature 1</li>
-    //           <li>Feature 2</li>
-    //           <li>Feature 3</li>
-    //         </ul>
-    //         <button className="btn btn-primary plan-button">Select Plan</button>
-    //       </div>
-    //     </div>
+    const navigate = useNavigate ();
 
-    //     <div className="col-md-4 mb-4">
-    //       <div className="plan-card">
-    //         <div className="plan-title">Plan 3</div>
-    //         <div className="plan-price">$30/month</div>
-    //         <ul className="plan-features">
-    //           <li>Feature 1</li>
-    //           <li>Feature 2</li>
-    //           <li>Feature 3</li>
-    //         </ul>
-    //         <button className="btn btn-primary plan-button">Select Plan</button>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
+    const plansData = [
+        {
+            title : "PRO",price:"9",subtitle: "Key benefits of Pro",features:["1 Employer" , "4 Services","10 Vactions","send email if customer canceled the appoitment ","1 Avaliable Posters"]
+        },
+        {
+            title : "Pro Plus",price:"19",subtitle: "The complete package, with",features:["3 Employer" , "8 Services","20 Vactions","Send email if customer order or canceled the appoitment ","3 Avaliable Posters"]
+        },
+        {
+            title : "PREMIUM",price:"29",subtitle: "All the advantages of Pro, plus",features:["10 Employer" , "12 Services","50 Vactions","Send email if customer order or canceled the appoitment ","5 Avaliable Posters"]
+        }
+    ]
+
+    const movetoPaymentPageFunc = (planTitle) =>{
+        const plan = plansData.filter(planItem => planItem.title === planTitle)
+        localStorage.removeItem("plan");
+        localStorage.setItem("plan",JSON.stringify(plan));
+        if(planTitle){
+            navigate("/shop-account/payment");
+        }
+
+    }
+
+    return (
+
     <div className="pricing-area">
         <div className="container">
             <div className="row">
-                {/* <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12"> */}
+                {plansData.map((plan) => (
                     <div className="single-price">
                         <div className="deal-top">
-                            <h3>Basic</h3>
-                            <h4> 9 <span className="sup">$</span> </h4> 
+                            <h3>{plan.title}</h3>
+                            <h4> {plan.price} <span className="sup">$</span><span className="sup-month">/ month</span>  </h4> 
                         </div>
                         <div className="deal-bottom">
                             <ul className="deal-item">
-                                <li>1 Employer</li>
-                                <li>3 Services</li>
-                                <li>5 Vactions</li>
-                                <li>500 gb Bandwidth </li>
-                                <li>24 hour Support </li>
+                                <li>{plan.subtitle}</li>
+                                {
+                                    plan.features.map((feature) => <li><AiOutlinePlus className="deal-item-icon"></AiOutlinePlus>{feature}</li>)
+                                }
+                                <li>{" "}</li>
                             </ul>
                             <div className="btn-area">
-                                <a href="#">Pay</a>       
+                                {/* <a  href="/shop-account/payment" onClick={movetoPaymentPage(plan.title)}>Pay</a>        */}
+                                <button  onClick={(e) => movetoPaymentPageFunc(plan.title)}>Pay</button>       
+
                             </div>
                         </div>
                     </div>
-                {/* </div> */}
-                {/* <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12"> */}
-                    <div className="single-price">
-                        <div className="deal-top">
-                            <h3>Standard</h3>
-                            <h4> 19 <span className="sup">$</span> </h4>
-                        </div>
-                        <div className="deal-bottom">
-                            <ul className="deal-item">
-                                <li>3 Employer</li>
-                                <li>10 Services</li>
-                                <li>20 Vactions</li>
-                                <li>1 TB Bandwidth </li>
-                                <li>24 hour Support </li>
-                            </ul>
-                            <div className="btn-area">
-                                <a href="#">Pay</a>       
-                            </div>
-                        </div>
-                    </div>
-                {/* </div> */}
-                {/* <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12"> */}
-                    <div className="single-price">
-                        <div className="deal-top">
-                            <h3>Professional</h3>
-                            <h4> 29 <span className="sup">$</span> </h4> 
-                        </div>
-                        <div className="deal-bottom">
-                            <ul className="deal-item">
-                                <li>10 Employer</li>
-                                <li>20 Services</li>
-                                <li>30 Vactions</li>
-                                <li>5 TB Bandwidth </li>
-                                <li>24 hour Support </li>
-                            </ul>
-                            <div className="btn-area">
-                                <a href="#">Pay</a>       
-                            </div>
-                        </div>
-                    </div>
-                {/* </div> */}
+                ))}
+                    
             </div>
         </div>       
 
