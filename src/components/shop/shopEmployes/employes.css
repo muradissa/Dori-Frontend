@@ -1,0 +1,102 @@
+.search-input{
+    display: flex;
+    width: max-content;
+    
+    margin: auto auto;
+    /* gap:1rem; */
+}
+
+.search-input input{
+
+    border-radius: 8px 0px 0px 8px;
+    width: 300px;
+}
+
+
+.search-input button{
+    width: fit-content;
+    display: flex;
+    gap: 8px;
+    border: 0px solid transparent;
+    border-radius: 0px 8px 8px 0px;
+    align-items: center;
+}
+
+.search-input .search-icon{
+    scale:1.4;
+    margin: auto auto;
+    width: 20px;
+    padding: 0px ;
+    
+}
+
+.search-result{
+    justify-items: center;
+    margin: auto;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    background: whitesmoke;
+    border-radius: 1rem;
+    width: 400px;
+    min-height: 200px;
+}
+
+.search-result h5{
+    text-align: center;
+    padding: 10px;
+}
+.search-result button{
+    display: inline;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    bottom: 30px;
+    justify-items: center;
+    position: absolute;
+    right: 30%;
+    left: 30%;
+    text-align: center;
+
+}
+
+
+.edit-employer-info{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.edit-employer-info-slide-img button{
+    border: 0px;
+    background: none;
+}
+.edit-employer-info img{
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+
+}
+
+.edit-employer-info-icon{
+    scale: 1.4;
+    cursor: pointer;
+    
+    
+}
+
+.edit-employer-status-select{
+    max-width: 400px;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.employer-edit-delete-btn{
+    display: flex;
+    margin :auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-left:3rem ;
+    padding-right:3rem ;
+
+}

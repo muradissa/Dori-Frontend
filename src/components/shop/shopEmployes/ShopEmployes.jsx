@@ -1,5 +1,8 @@
 import React from 'react'
 import {LuEdit} from 'react-icons/lu';
+import AddEmployerModal from './AddEmployerModal';
+import "./employes.css" 
+import EditEmployerModal from './EditEmployerModal';
 
 function ShopEmployes() {
 
@@ -113,6 +116,16 @@ function ShopEmployes() {
       avatar:"12",
     }
   ];
+
+  const [modalShowAddEmployer, setModalShowAddEmployer] = React.useState(false);
+  const [modalShowEditEmployer, setModalShowEditEmployer] = React.useState(false);
+  const [selectedEditEmployer, setSelectedEditEmployer] = React.useState(null);
+
+  const EditEmployerFunction = (item) =>{
+    setSelectedEditEmployer(item);
+    setModalShowEditEmployer(true);
+}
+
   return (
     <div className="table-container">
       {/* <button>AddEmployer +</button> */}
@@ -148,12 +161,12 @@ function ShopEmployes() {
                 <td>{employer.email}</td>
                 <td>{employer.birthday}</td>
 
-                <td ><LuEdit style={{color:"green"}}/></td>
+                <td onClick={()=>EditEmployerFunction(employer)}><LuEdit style={{color:"green",cursor:"pointer"}} /></td>
               </tr>
             ))}
           </tbody>
         </table>
-        <button style={{marginTop:"2rem"}}>AddEmployer +</button>
+        <button style={{marginTop:"2rem"}} onClick={()=>setModalShowAddEmployer(true)}>AddEmployer +</button>
 
       </div>
       
@@ -163,6 +176,13 @@ function ShopEmployes() {
           onHide={() => setModalShowEditWorktime(false)}
           workTimeItem={itemEditWorktime}/>
       } */}
+      { modalShowAddEmployer &&
+          <AddEmployerModal show={modalShowAddEmployer} onHide={() => setModalShowAddEmployer(false)} />
+      }
+      {/* <AddService show={modalShowNewService} onHide={() => setModalShowNewService(false)}/> */}
+      { modalShowEditEmployer &&
+          <EditEmployerModal show={modalShowEditEmployer} onHide={() => setModalShowEditEmployer(false)} employer={selectedEditEmployer}/>
+      }
     </div>
   )
 }

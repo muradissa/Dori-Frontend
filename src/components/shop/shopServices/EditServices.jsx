@@ -4,6 +4,9 @@ import React, { useState ,useEffect} from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
+import { AiFillDelete} from 'react-icons/ai';
+import { TiDelete} from 'react-icons/ti';
+
 import InputGroup from 'react-bootstrap/InputGroup';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
@@ -62,7 +65,6 @@ function EditServices(props) {
         {initParameters  &&
             <div className='service-modal-body'>
 
-
                 <div >
                   <FloatingLabel controlId="floatingInputGrid1" label="Service Name">
                     <Form.Control type="text" placeholder="Enter Service Name" value={name} onChange={handleNameChange} />
@@ -76,7 +78,7 @@ function EditServices(props) {
                   </FloatingLabel>
                 </div>
         
-
+                <Button className="btn-delete" variant="danger"><TiDelete className='delete-icon'/> Delete</Button>
             </div>
         }
       </Modal.Body>
