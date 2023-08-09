@@ -1,0 +1,77 @@
+
+.vacation-table {
+    width: 100%;
+  }
+  
+  .vacation-table td:nth-child(1){
+    width: 25%;
+    /* display: contents; */
+    overflow-x: hidden;
+    /* white-space: pre-wrap;   
+    overflow: hidden;        
+    text-overflow: ellipsis;  */
+  }
+  
+  .vacation-table td:nth-child(2){
+    width: 15%;
+  }
+  .vacation-table td:nth-child(3){
+    width: 20%;
+  }
+  .vacation-table td:nth-child(4){
+    width: 20%;
+  }
+  .vacation-table td:nth-child(5){
+    cursor: pointer;
+  }
+  .vacation-table td:nth-child(6){
+    cursor: pointer;
+  }
+  
+
+.vacation-dates-from-to{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.vacation-dates-from-to .datepicker-choosing-date{
+    display: block;
+    margin: 1rem;
+
+}
+
+.vacation-dates-from-to .datepicker-input{
+    width: max-content;
+}
+
+.vacation-employess-item-not-selected{
+    background-color: whitesmoke;
+}
+
+.vacation-employess-item-not-selected , .vacation-employess-item-selected{
+    
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid var(--primary);
+    border-radius: 0.3rem;
+    text-align: center;
+    min-width: 150px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.vacation-employess-item-selected{
+    background-color: rgb(151, 150, 150);
+    color: var(--primary);
+    color: white;
+
+}
+
+.vacation-employess{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1rem;
+    padding: 5px;
+
+}
