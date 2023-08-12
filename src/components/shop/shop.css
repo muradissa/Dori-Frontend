@@ -168,26 +168,4 @@
 }
 
 
-.vacation-table {
-  width: 100%;
-}
-
-.vacation-table td:nth-child(1){
-  width: 25%;
-
-  white-space: pre-wrap;   
-  overflow: hidden;        /* Hide overflowing content */
-  text-overflow: ellipsis; /* Display ellipsis (...) for overflow */
-}
-
-.vacation-table td:nth-child(2){
-  width: 15%;
-}
-.vacation-table td:nth-child(3){
-  width: 20%;
-}
-.vacation-table td:nth-child(4){
-  width: 20%;
-}
-
 

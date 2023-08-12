@@ -180,6 +180,7 @@ function NotificationBox() {
             //waiting
             return 'info';
         }
+        
     }
 
     const orderNotificationsByDateTime = (data ,shouldReverse) => {
