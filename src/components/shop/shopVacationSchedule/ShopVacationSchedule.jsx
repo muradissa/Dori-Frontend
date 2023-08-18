@@ -5,6 +5,7 @@ import {LuEdit} from 'react-icons/lu';
 import {RiDeleteBinFill}  from 'react-icons/ri';
 import AddOrEditVacationModal from './AddOrEditVacationModal';
 import './vacation.css'
+import PrimaryTitle from '../../global/PrimaryTitle';
 function ShopVacationSchedule() {
 
   const shopVacations = [
@@ -125,7 +126,9 @@ function ShopVacationSchedule() {
       <div className="table-container">
 
         <div className="table">
-          <h2>Vacation Schedule</h2>
+          {/* <h2>Vacation Schedule</h2> */}
+          <PrimaryTitle title={"Vacation Schedule"}/>
+          
           <div className="shop-vacation-schedule-controls">
             <DropdownButton id="dropdown-vacation-button1" title={months[selectedMonth]} value={selectedMonth}>
               {months.map((month, index) => (

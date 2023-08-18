@@ -5,6 +5,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Button from 'react-bootstrap/Button';
 
 import './shopSettings.css'
+import PrimaryTitle from '../../global/PrimaryTitle';
 function ShopSettings() {
     const [theme, setTheme] = useState('light');
 
@@ -21,8 +22,9 @@ function ShopSettings() {
 
     return (
         <div className='business-settings'>
-            {/* customers */}
-            <h2 >Settings</h2>
+            {/* <h2 >Settings</h2> */}
+            <PrimaryTitle title={"Settings"}/>
+
             <div className='business-settings-switches'>
                 <Form>     
                     <Form.Check

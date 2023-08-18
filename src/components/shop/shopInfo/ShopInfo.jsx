@@ -8,6 +8,7 @@ import {LuEdit} from 'react-icons/lu';
 
 import './shopInfo.css'
 import ShopInfoPoster from './ShopInfoPoster';
+import PrimaryTitle from '../../global/PrimaryTitle';
 function ShopInfo() {
 
     const [modalShow, setModalShow] = React.useState(false);
@@ -16,10 +17,11 @@ function ShopInfo() {
  
   return (
     <div className="shop-info">
-        <h2 style={{marginBottom:"2rem"}}>Shop Info</h2>
+        {/* <h2 style={{marginBottom:"2rem"}}>Shop Info</h2> */}
+        <PrimaryTitle title={"Shop Info"}></PrimaryTitle>
 
         <div className='shop-info-code-poster'>
-            <h3 >Code : c3g5h1</h3>
+            <h4 >Code : c3g5h1</h4>
             <button className='btn-secondary'  onClick={()=>{
                 setModalPosterShow(true);
             }}>Show Poster <FaEye style={{scale:1.5}}/> / <BsDownload style={{scale:1.5}}/></button>

@@ -3,6 +3,7 @@ import {LuEdit} from 'react-icons/lu';
 import AddEmployerModal from './AddEmployerModal';
 import "./employes.css" 
 import EditEmployerModal from './EditEmployerModal';
+import PrimaryTitle from '../../global/PrimaryTitle';
 
 function ShopEmployes() {
 
@@ -135,7 +136,9 @@ function ShopEmployes() {
           <button >AddEmployer +</button>
           
         </div> */}
-        <h2>Shop Employes</h2>
+        {/* <h2>Shop Employes</h2> */}
+        <PrimaryTitle title={"Shop Employes"}></PrimaryTitle>
+
 
         
         <table>

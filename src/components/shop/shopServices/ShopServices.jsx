@@ -4,6 +4,7 @@ import {LuEdit} from 'react-icons/lu';
 import './shopServices.css'
 import EditServices from './EditServices';
 import AddService from './AddService';
+import PrimaryTitle from '../../global/PrimaryTitle';
 function ShopServices() {
     const [modalShowNewService, setModalShowNewService] = React.useState(false);
     const [modalShowEditService, setModalShowEditervice] = React.useState(false);
@@ -38,7 +39,9 @@ function ShopServices() {
 
     return (
         <div className='shop-services-container'> 
-            <h2>Services</h2>
+            {/* <h2>Services</h2> */}
+            <PrimaryTitle title={"Services"}></PrimaryTitle>
+
             <div className='shop-services'>
                 {services.map(item => 
                 <div className='shop-services-item' onClick={() => EditServiceFunction(item)}>

@@ -59,7 +59,7 @@ function App() {
         <div style={{display:"flex",gap:"1rem"}}>
 
           <Sidebar/>
-          <div style={{display:"flex",width:"100%",marginLeft:"250px",marginTop:"100px"}}>
+          <div style={{display:"flex",width:"100%",marginLeft:"250px",paddingTop:"100px"}}>
             <Outlet />
 
           </div>

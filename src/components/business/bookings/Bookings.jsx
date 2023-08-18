@@ -14,6 +14,7 @@ import {LuEdit} from 'react-icons/lu';
 
 
 import './bookings.css'
+import PrimaryTitle from '../../global/PrimaryTitle';
 function Bookings() {
   const allBookings = [
     { id: 1, name: 'John Doe', phone: '052-345-1234', service: 'Haircut', time: '10:00 AM', date: 'June 12', status: 'Approved' },
@@ -63,7 +64,9 @@ function Bookings() {
         }
       </div> */}
       <div className="table">
-        <h2>Bookings</h2>
+       <PrimaryTitle title={"Bookings"}/>
+
+        {/* <h2>Bookings</h2> */}
         <div className='bookings-choosing-date'>
           <DropdownButton id="dropdown-booking-button" title={selectedDropDownDate}>
             <Dropdown.Item onClick={()=>setSelectedDropDownDate('Today')}>Today</Dropdown.Item>

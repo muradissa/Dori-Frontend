@@ -2,6 +2,7 @@ import React ,{useState} from 'react';
 import {LuEdit} from 'react-icons/lu';
 import EditWorkTimeModal from './EditWorkTimeModal';
 import './shopWorkSchedule.css';
+import PrimaryTitle from '../../global/PrimaryTitle';
 function ShopWorkSchedule() {
   const shopHours = [
     { day: 'Sunday', open: 'Closed', close: 'Closed', breakFrom: 'Closed' ,breakTo:"Closed" },
@@ -44,7 +45,9 @@ function ShopWorkSchedule() {
       <div className="table-container">
 
         <div className="table">
-          <h2>Shop Hours</h2>
+          {/* <h2>Shop Hours</h2> */}
+          <PrimaryTitle title={"Shop Hours"}/>
+
           <table>
             <thead>
               <tr>

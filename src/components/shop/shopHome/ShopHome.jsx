@@ -6,6 +6,7 @@ import {FcCheckmark,FcCancel,FcApproval} from 'react-icons/fc';
 
 import './shophome.css';
 import ChartBarMonth from './ChartBarMonth';
+import PrimaryTitle from '../../global/PrimaryTitle';
 function ShopHome() {
     const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
     const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth());
@@ -20,9 +21,10 @@ function ShopHome() {
    
 
         <div className='shop-home-row1'>
-            <h3>
+            {/* <h3>
                 Summary of appointments for today
-            </h3>
+            </h3> */}
+            <PrimaryTitle title={'Summary of appointments for today'}></PrimaryTitle>
             <div className='shop-home-blocks'>
                 {/* <div className='shop-home-block'>
                     <h5>All</h5>

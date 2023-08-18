@@ -21,8 +21,15 @@
 
 .App {
   text-align: center;
+  background-color: whitesmoke;
+  min-height: 100vh;
 }
 
+.primary-title h3{
+  padding-top:3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
 
 /****************** scrollbar ************************/
 
@@ -147,6 +154,8 @@
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   padding: 20px;
+  padding-top: 0px;
+
 }
 
 .tbody-today-tomorrow{
