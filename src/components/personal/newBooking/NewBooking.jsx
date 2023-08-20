@@ -15,7 +15,7 @@ function NewBooking() {
   return (
     <div className='new-booking'>
 
-      <div className='left-side'>
+      {/* <div className='left-side'>
 
         <div className='search-favorite'>
           <button className='btn-radio btn-search' onClick={()=>setChoosingType(1)}>
@@ -33,6 +33,7 @@ function NewBooking() {
               <button className='serach-icon'><AiOutlineSearch/></button>
           </div>
         }
+       
         {choosingType === 2 && 
           <div className='favorite'>
             <DropdownButton id="dropdown-basic-button" title="choose store">
@@ -55,17 +56,15 @@ function NewBooking() {
             <GrLocation/> Tel aviv asfasfa 3 sadfd</h5>
           <br/>
           <button className='add-to-favorite'>Add to Favorite <AiOutlinePlus/></button>
-          {/* <button className='add-to-favorite'>Add to Favorite +</button> */}
-          {/* <button className='remove-from-favorite'>Remove from Favorite +</button> */}
-
         </div>
 
       </div>
 
       <div className='right-side'>
         <BookingStepper/>
-      </div>
+      </div> */}
       
+      <BookingStepper/>
 
     </div>
   )

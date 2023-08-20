@@ -7,9 +7,10 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Step1 from './Step1';
 import Step2 from './Step2';
+import Step3 from './Step3';
 
 // const steps = ['Select campaign settings', 'Create an ad group', 'Create an ad'];
-const steps = ['Select campaign settings', 'Create an ad group'];
+const steps = ['Step 1','Step 2', 'Step 3'];
 
 
 export default function BookingStepper() {
@@ -59,18 +60,18 @@ export default function BookingStepper() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box className="new-appointment">
       <Stepper activeStep={activeStep}>
         {steps.map((label, index) => {
           const stepProps = {};
           const labelProps = {};
           if (isStepOptional(index)) {
-            labelProps.optional = (
-              <Typography variant="caption">Optional</Typography>
-            );
+            // labelProps.optional = (
+            //   <Typography variant="caption">Optional</Typography>
+            // );
           }
           if (isStepSkipped(index)) {
-            stepProps.completed = false;
+            // stepProps.completed = false;
           }
           return (
             <Step key={label} {...stepProps}>
@@ -98,6 +99,9 @@ export default function BookingStepper() {
             {
               activeStep===1 && <Step2></Step2>
             }
+            {
+              activeStep===2 && <Step3 ></Step3>
+            }
             {/* Step {activeStep + 1} +55 */}
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
@@ -110,11 +114,11 @@ export default function BookingStepper() {
               Back
             </Button>
             <Box sx={{ flex: '1 1 auto' }} />
-            {isStepOptional(activeStep) && (
+            {/* {isStepOptional(activeStep) && (
               <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
                 Skip
               </Button>
-            )}
+            )} */}
 
             <Button onClick={handleNext}>
               {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
