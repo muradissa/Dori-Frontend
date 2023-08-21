@@ -101,13 +101,19 @@
 
 }
 .list-of-services{
-    max-height: 40vh;
+    max-height: 50vh;
     overflow-y: auto;
-    width: 400px;
+    width: 500px;
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-radius: 1rem;
+
 }
 .item-service{
     width: 350px;
-    margin:5px 5px;
+    margin: 8px auto;
+    /* margin:5px 5px; */
+
     padding: 5px 5px;
     background-color: #e0e0e0;
     justify-content: center;
@@ -117,6 +123,7 @@
     transition: 0.4s;
 }
 .selected-service{
+    color: white;
     background-color: var(--secondory);
 }
 .item-service span{
@@ -131,17 +138,25 @@
 
 }
 .list-of-employers{
-    max-height: 40vh;
+    max-height: 50vh;
     overflow-y: auto;
-    width: 300px;
+    width: 500px;
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    /* max-height: 40vh;
+    overflow-y: auto;
+    width: 300px; */
+    
     
 }
 .item-employer{
     display: flex;
-    margin: 5px 5px;
-    margin-right: 0px;
+    margin: 8px auto;
+    /* margin-right: 0px; */
     padding: 5px 5px;
-    width: 250px;
+    width: 300px;
     background-color: #e0e0e0;
     /* justify-content: center; */
     align-items: center;
@@ -151,7 +166,11 @@
     font-size: 20px;
     gap: 1rem;
 }
+/* .item-employer>span{
+    text-align:center;
+} */
 .selected-employer{
+    color: white;
     background-color: var(--secondory);
 }
 .item-employer-img{
@@ -207,6 +226,7 @@
     margin-right: 0; */
     border-radius:  0.5rem 0 0  0.5rem;
     border-color: var(--primary);
+
 }
 
 .search button{
@@ -218,8 +238,17 @@
     border: none;
 }
 .search>input[type="text"]:focus , .search input:hover .search input::after{
-    border-color: var(--primary);
-    
+    /* border-color: var(--primary); */
+    outline: 1px solid var(--primary);
     /* box-shadow: 0 1px 5px rgba(211, 6, 252, 0.5); */
     
+}
+
+.search-favorite{
+    margin-bottom: 2rem;
+}
+
+.search-step-left h6{
+    padding: 3px;
+    color: gray;
 }

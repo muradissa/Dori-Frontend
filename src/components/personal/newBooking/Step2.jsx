@@ -51,6 +51,26 @@ function Step2() {
             name:"John Avhent",
             image:"avatar10.png",
         },
+        {
+            id:1,
+            name:"Avi Ros",
+            image:"avatar2.png",
+        },
+        {
+            id:2,
+            name:"Bell Woleter",
+            image:"avatar3.png",
+        },
+        {
+            id:3,
+            name:"Tmir Frank",
+            image:"avatar7.png",
+        },
+        {
+            id:5,
+            name:"Sami Tme",
+            image:"avatar4.png",
+        },
     ]
   return (
     
@@ -74,8 +94,8 @@ function Step2() {
                         className={"item-employer "+ `${employer.id === chooseEmployer ? " selected-employer":""}` }
                         onClick={()=> setChosenEmployer(employer.id)}
                     >
-                        <img className="item-employer-img" src={`./assets/${employer.image}`} alt=""></img>
-                        <span >{employer.name}</span>
+                        <img className="item-employer-img" src={`/assets/${employer.image}`} alt=""></img>
+                        <span  >{employer.name}</span>
                     </div>
                 )}
             </div>

@@ -23,6 +23,7 @@ import PrivateRoute from "./components/global/PrivateRoute";
 import UpgradeAccount from "./components/business/upgradeAccount/UpgradeAccount";
 import CardForm from "./components/business/upgradeAccount/CardForm";
 import Plans from "./components/plans/Plans";
+import CreateAccount from "./components/shop/createAccount/CreateAccount";
 
 //import ChangeAccounts from './components/changeaccounts/ChangeAccounts';
 
@@ -121,6 +122,7 @@ function App() {
                 <Route exact path='/shop-account' element={<LayoutShop />} >
                   
                   <Route exact path='/shop-account' element={<ShopHome/>}/>
+                  <Route exact path='/shop-account/create-account' element={<CreateAccount/>}/>
                   <Route exact path='/shop-account/bookings' element={<Bookings/>}/>
                   <Route exact path='/shop-account/notifications' element={<Notifications/>}/>
                   <Route exact path='/shop-account/shop-info' element={<ShopInfo/>}/>
