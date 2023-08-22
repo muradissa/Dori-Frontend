@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 
+import { FcInfo} from 'react-icons/fc';
 // import { AiFillDelete} from 'react-icons/ai';
 // import { TiDelete} from 'react-icons/ti';
 // import InputGroup from 'react-bootstrap/InputGroup';
@@ -62,6 +63,25 @@ function CreateAccount() {
         setAddress(event.target.value);
     };
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+    
+        // Here, you can access all the captured values.
+        const formData = {
+          profileImage,
+          name,
+          type,
+          email,
+          phone1,
+          phone2,
+          country,
+          city,
+          address
+        };
+    
+        console.log(formData);
+        // You can perform further actions with the captured form data.
+      };
     
 
 
@@ -75,63 +95,66 @@ function CreateAccount() {
               <Form.Control type="file" accept="image/*" onChange={handleProfileImageChange} placeholder='Choose Image'/>
             </Form.Group>
         </div> */}
-        <div className='create-account-fields'>
-        <Form.Group as={Col} md="12" controlId="validationProfileImage">           
-              {!profileImage && <img className="shop-info-modal-img" src="/assets/dori-logo.png" alt="Profile Image" />}             
-              {profileImage && <img className="shop-info-modal-img" src={URL.createObjectURL(profileImage)} alt="Profile Image" />}
-              <Form.Control type="file" accept="image/*" onChange={handleProfileImageChange} placeholder='Choose Image' style={{maxWidth:"300px"}}/>
-            </Form.Group>
-            <div className='input-field'>
-                <FloatingLabel controlId="floatingInputGrid1" label="Name">
-                    <Form.Control type="text" placeholder="Enter Business Name" value={name} onChange={handleNameChange} />
-                </FloatingLabel>
-            </div>
+        <div  className='create-account-fields'>
+            <Form onSubmit={handleSubmit} style={{display:"flex",flexDirection:"column",gap:"8px"}}>
+                <Form.Group as={Col} md="12" controlId="validationProfileImage">           
+                {!profileImage && <img className="shop-info-modal-img" src="/assets/dori-logo.png" alt="Profile Image" />}             
+                {profileImage && <img className="shop-info-modal-img" src={URL.createObjectURL(profileImage)} alt="Profile Image" />}
+                <Form.Control type="file" accept="image/*" onChange={handleProfileImageChange} placeholder='Choose Image' size="sm" style={{maxWidth:"300px",margin:"auto"}}/>
+                </Form.Group>
+                <div className='input-field'>
+                    <FloatingLabel controlId="floatingInputGrid1" label="Name" className='labelll-test'>          
+                        <Form.Control type="text" placeholder="Enter Business Name" value={name} onChange={handleNameChange} /> 
+                        {/* <FcInfo style={{width:"30px",margin:"auto",scale:"1.6"}}></FcInfo> */}
+                    </FloatingLabel>
+                </div>
 
-            <div className='input-field' >
-                <FloatingLabel controlId="floatingInputGrid1" label="Business Type">
-                    <Form.Control type="text" placeholder="Enter Business Type" value={type} onChange={handleTypeChange} />
-                </FloatingLabel>
-            </div>
+                <div className='input-field' >
+                    <FloatingLabel controlId="floatingInputGrid1" label="Business Type">
+                        <Form.Control type="text" placeholder="Enter Business Type" value={type} onChange={handleTypeChange} />
+                    </FloatingLabel>
+                </div>
 
-            <div className='input-field' >
-                <FloatingLabel controlId="floatingInputGrid1" label="Email">
-                    <Form.Control type="text" placeholder="Enter Email @" value={email} onChange={handleEmailChange} />
-                </FloatingLabel>
-            </div>
+                <div className='input-field' >
+                    <FloatingLabel controlId="floatingInputGrid1" label="Email">
+                        <Form.Control type="text" placeholder="Enter Email @" value={email} onChange={handleEmailChange} />
+                    </FloatingLabel>
+                </div>
 
-            <div  className='input-field'>
-                <FloatingLabel controlId="floatingInputGrid1" label="Phone 1">
-                    <Form.Control type="text" placeholder="Enter Phone 1" value={phone1} onChange={handlePhone1Change} />
-                </FloatingLabel>
-            </div>
+                <div  className='input-field'>
+                    <FloatingLabel controlId="floatingInputGrid1" label="Phone 1">
+                        <Form.Control type="text" placeholder="Enter Phone 1" value={phone1} onChange={handlePhone1Change} />
+                    </FloatingLabel>
+                </div>
 
-            <div className='input-field' >
-                <FloatingLabel controlId="floatingInputGrid1" label="Phone 2">
-                    <Form.Control type="text" placeholder="Enter Phone 2" value={phone2} onChange={handlePhone2Change} />
-                </FloatingLabel>
-            </div>
+                <div className='input-field' >
+                    <FloatingLabel controlId="floatingInputGrid1" label="Phone 2">
+                        <Form.Control type="text" placeholder="Enter Phone 2" value={phone2} onChange={handlePhone2Change} />
+                    </FloatingLabel>
+                </div>
 
-            <div className='input-field' >
-                <FloatingLabel controlId="floatingInputGrid1" label="Country">
-                    <Form.Control type="text" placeholder="Enter Country" value={country} onChange={handleCountryChange} />
-                </FloatingLabel>
-            </div>
+                <div className='input-field' >
+                    <FloatingLabel controlId="floatingInputGrid1" label="Country">
+                        <Form.Control type="text" placeholder="Enter Country" value={country} onChange={handleCountryChange} />
+                    </FloatingLabel>
+                </div>
 
-            <div className='input-field' >
-                <FloatingLabel controlId="floatingInputGrid1" label="City">
-                    <Form.Control type="text" placeholder="Enter City" value={city} onChange={handleCityChange} />
-                </FloatingLabel>
-            </div>
+                <div className='input-field' >
+                    <FloatingLabel controlId="floatingInputGrid1" label="City">
+                        <Form.Control type="text" placeholder="Enter City" value={city} onChange={handleCityChange} />
+                    </FloatingLabel>
+                </div>
 
-            <div className='input-field' >
-                <FloatingLabel controlId="floatingInputGrid1" label="Address ">
-                    <Form.Control type="text" placeholder="Enter Address" value={address} onChange={handleAddressChange} />
-                </FloatingLabel>
-            </div>
+                <div className='input-field' >
+                    <FloatingLabel controlId="floatingInputGrid1" label="Address ">
+                        <Form.Control type="text" placeholder="Enter Address" value={address} onChange={handleAddressChange} />
+                    </FloatingLabel>
+                </div>
 
-            <div>
-            <button>Save</button>
-        </div>
+                <div>
+                    <button type='submit'>Save</button>
+                </div>
+            </Form>
         </div>
         <div className='create-account-image'>
             <img src="/assets/create-account.gif"></img>
